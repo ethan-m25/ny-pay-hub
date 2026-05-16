@@ -1,0 +1,544 @@
+#!/usr/bin/env python3
+"""
+ny-pay-hub/scripts/search-workday.py
+Workday CXS API scraper — New York State edition.
+
+NY Labor Law §194-b: employers with 4+ employees must post salary range.
+Effective September 17, 2023. Financial services, media, pharma, and tech
+companies in NY are heavy Workday users.
+
+Strategy:
+  1. Seed tenants (known NY Workday employers) + Exa discovery
+  2. CXS JSON API — paginate all jobs per tenant, filter NY locations
+  3. Fetch job HTML page — salary in <meta> / JSON-LD; regex extraction
+
+Run: python3 ~/ny-pay-hub/scripts/search-workday.py
+"""
+
+import json
+import os
+import re
+import subprocess
+import sys
+import time
+import urllib.request
+import urllib.parse
+from datetime import date, timedelta
+
+sys.path.insert(0, os.path.dirname(__file__))
+from _common import (
+    make_logger, acquire_lock, exa_search, load_existing_keys, write_job,
+    TODAY, OUTPUT_FILE,
+)
+
+LOG_FILE      = os.path.expanduser("~/ny-pay-hub/scripts/workday.log")
+LOCK_FILE     = os.path.expanduser("~/ny-pay-hub/scripts/.workday.lock")
+LOOKBACK_DATE = (date.today() - timedelta(days=60)).isoformat() + "T00:00:00.000Z"
+
+log = make_logger(LOG_FILE)
+
+UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
+
+# ── Seed tenants — NY-present Workday employers ───────────────────────────────
+# (host, company_id, tenant, display_name)
+SEED_TENANTS = [
+    # Financial services (NY HQ / major NY presence)
+    ("jpmc.wd1.myworkdayjobs.com",          "jpmc",         "JPMcCommon",              "JPMorgan Chase"),
+    ("goldmansachs.wd1.myworkdayjobs.com",  "goldmansachs", "GlobalApps",              "Goldman Sachs"),
+    ("morganstanley.wd1.myworkdayjobs.com", "morganstanley","ExternalCareers",         "Morgan Stanley"),
+    ("aexp.wd5.myworkdayjobs.com",          "aexp",         "external_career_site",    "American Express"),
+    ("metlife.wd1.myworkdayjobs.com",       "metlife",      "Global",                  "MetLife"),
+    ("newyorklife.wd5.myworkdayjobs.com",   "newyorklife",  "NYLCareers",              "New York Life"),
+    ("bloomberg.wd1.myworkdayjobs.com",     "bloomberg",    "finance",                 "Bloomberg"),
+    ("blackrock.wd1.myworkdayjobs.com",     "blackrock",    "Careers",                 "BlackRock"),
+    ("pimco.wd1.myworkdayjobs.com",         "pimco",        "Careers",                 "PIMCO"),
+    ("icapital.wd1.myworkdayjobs.com",      "icapital",     "iCapitalNetwork",         "iCapital"),
+    # Insurance
+    ("travelers.wd5.myworkdayjobs.com",     "travelers",    "ext",                     "Travelers Insurance"),
+    ("cna.wd1.myworkdayjobs.com",           "cna",          "CNA_Jobs",                "CNA Financial"),
+    # Pharma / life sciences (NY presence)
+    ("pfizer.wd1.myworkdayjobs.com",        "pfizer",       "PfizerEarlyTalent",       "Pfizer"),
+    ("pfizer.wd1.myworkdayjobs.com",        "pfizer",       "PfizerCareers",           "Pfizer"),
+    ("bms.wd5.myworkdayjobs.com",           "bms",          "External",                "Bristol-Myers Squibb"),
+    ("lilly.wd5.myworkdayjobs.com",         "lilly",        "Lilly",                   "Eli Lilly"),
+    # Media / entertainment
+    ("nbcuni.wd1.myworkdayjobs.com",        "nbcuni",       "Careers",                 "NBCUniversal"),
+    ("viacomcbs.wd1.myworkdayjobs.com",     "viacomcbs",    "External",                "Paramount"),
+    ("nytimes.wd1.myworkdayjobs.com",       "nytimes",      "Careers",                 "The New York Times"),
+    ("hearst.wd5.myworkdayjobs.com",        "hearst",       "Hearst_External_Career_Site", "Hearst"),
+    # Tech (NY offices)
+    ("verizon.wd5.myworkdayjobs.com",       "verizon",      "External",                "Verizon"),
+    ("ibm.wd12.myworkdayjobs.com",          "ibm",          "ExternalSite",            "IBM"),
+    ("salesforce.wd12.myworkdayjobs.com",   "salesforce",   "External_Career_Site",    "Salesforce"),
+    ("spotify.wd1.myworkdayjobs.com",       "spotify",      "External",                "Spotify"),
+    ("datadog.wd1.myworkdayjobs.com",       "datadog",      "Careers",                 "Datadog"),
+    # Healthcare
+    ("northwellhealth.wd5.myworkdayjobs.com","northwellhealth","External",             "Northwell Health"),
+    ("mountsinai.wd5.myworkdayjobs.com",    "mountsinai",   "CareersAtMountSinai",     "Mount Sinai Health System"),
+    # Retail / consumer (NY HQ)
+    ("macys.wd5.myworkdayjobs.com",         "macys",        "macys",                   "Macy's"),
+    ("estee-lauder.wd5.myworkdayjobs.com",  "estee-lauder", "EsteeLauder",             "Estée Lauder"),
+    ("tapestry.wd5.myworkdayjobs.com",      "tapestry",     "tapestrycareers",         "Tapestry (Coach)"),
+    ("pvh.wd5.myworkdayjobs.com",           "pvh",          "PVHCorp",                 "PVH (Calvin Klein/Tommy Hilfiger)"),
+    ("tiffany.wd5.myworkdayjobs.com",       "tiffany",      "TiffanyGlobal",           "Tiffany & Co."),
+    # Professional services
+    ("deloitte.wd1.myworkdayjobs.com",      "deloitte",     "ExternalCareers",         "Deloitte"),
+    ("accenture.wd3.myworkdayjobs.com",     "accenture",    "AccentureCareers",        "Accenture"),
+    ("pwc.wd3.myworkdayjobs.com",           "pwc",          "Global_Experienced_Careers", "PwC"),
+    ("kpmg.wd5.myworkdayjobs.com",          "kpmg",         "KPMG_Careers",            "KPMG"),
+    # Real estate
+    ("jll.wd5.myworkdayjobs.com",           "jll",          "JLL_Global_Careers",      "JLL"),
+    ("cushmanwakefield.wd1.myworkdayjobs.com","cushmanwakefield","CushmanWakefield",    "Cushman & Wakefield"),
+    # Transportation / logistics
+    ("jetblue.wd5.myworkdayjobs.com",       "jetblue",      "JetBlueCareers",          "JetBlue"),
+]
+
+KNOWN_COMPANY_OVERRIDES = {
+    "jpmc":            "JPMorgan Chase",
+    "goldmansachs":    "Goldman Sachs",
+    "morganstanley":   "Morgan Stanley",
+    "aexp":            "American Express",
+    "metlife":         "MetLife",
+    "newyorklife":     "New York Life",
+    "nbcuni":          "NBCUniversal",
+    "viacomcbs":       "Paramount",
+    "nytimes":         "The New York Times",
+    "bms":             "Bristol-Myers Squibb",
+    "macys":           "Macy's",
+    "northwellhealth": "Northwell Health",
+    "mountsinai":      "Mount Sinai Health System",
+    "tapestry":        "Tapestry (Coach/Kate Spade/Stuart Weitzman)",
+    "pvh":             "PVH Corp (Calvin Klein / Tommy Hilfiger)",
+    "icapital":        "iCapital",
+    "salesforce":      "Salesforce",
+    "accenture":       "Accenture",
+    "deloitte":        "Deloitte",
+    "pwc":             "PwC",
+    "jll":             "JLL",
+    "cushmanwakefield":"Cushman & Wakefield",
+}
+
+DISCOVERY_QUERIES = [
+    'site:myworkdayjobs.com "New York" salary 2026',
+    'site:myworkdayjobs.com "New York City" OR "NYC" job salary "$" 2026',
+    'site:myworkdayjobs.com "New York, NY" engineer OR analyst OR manager 2026',
+    'site:myworkdayjobs.com "Manhattan" OR "Brooklyn" salary range 2026',
+    'site:myworkdayjobs.com New York finance OR "financial services" salary 2026',
+    'site:myworkdayjobs.com New York pharma OR healthcare OR hospital salary 2026',
+    'site:myworkdayjobs.com "New York" media OR entertainment salary 2026',
+    'site:myworkdayjobs.com "New York" tech OR software OR engineering salary 2026',
+]
+
+NY_TERMS = [
+    "new york", "new york city", "nyc", "manhattan", "brooklyn", "queens",
+    "bronx", "long island", "albany", "buffalo", "rochester", "yonkers",
+    "syracuse", ", ny,", "ny,", "new york state",
+]
+
+_NY_PATH_TERMS = ["-new-york", "-ny-", "/new-york/", "new-york-city", "-nyc-"]
+
+_NON_NY_PATH_TERMS = [
+    "/california/", "/san-francisco/", "/los-angeles/", "/seattle/", "/chicago/",
+    "/boston/", "/texas/", "/florida/", "/atlanta/", "/denver/",
+    "/toronto/", "/ontario/", "/british-columbia/", "/london-london/",
+    "/united-kingdom/", "/england/", "-usa-west", "ca-usa", "tx-usa", "fl-usa",
+]
+
+SALARY_RE = [
+    re.compile(r'\$\s*([\d,]+)(?:\.\d+)?\s*(?:USD|usd)?\s*[-–—to]+\s*\$\s*([\d,]+)', re.IGNORECASE),
+    re.compile(r'\$([\d]+(?:\.\d+)?)[kK]\s*[-–—]\s*\$([\d]+(?:\.\d+)?)[kK]', re.IGNORECASE),
+    re.compile(r'(?:pay|salary|compensation|base|wage|range|annual)[^$\n]{0,60}\$?([\d,]{5,})\s*[-–—to]+\s*\$?([\d,]{5,})', re.IGNORECASE),
+    re.compile(r'salary\s+range\s*:\s*([\d,]+)\s*[-–—]\s*([\d,]+)', re.IGNORECASE),
+]
+
+_WD_URL_RE = re.compile(
+    r'https?://([a-z0-9][a-z0-9-]*)\.wd\d+\.myworkdayjobs\.com(?:/[a-z]{2}-[A-Z]{2})?/([^/?#]+)',
+    re.IGNORECASE,
+)
+_WD_SITE_URL_RE = re.compile(
+    r'https?://wd\d+\.myworkdaysite\.com(?:/[a-z]{2}-[A-Z]{2})?/recruiting/([a-z0-9][a-z0-9-]*)/([^/?#]+)',
+    re.IGNORECASE,
+)
+_SKIP_TENANTS = {'job', 'jobs', 'search', 'en', 'en-us', 'en-gb', 'fr', 'details', 'recruiting'}
+_NUMERIC_PREFIX_RE = re.compile(r'^\d{3,5}\s+')
+
+
+def format_tenant_name(company_id, tenant):
+    override = KNOWN_COMPANY_OVERRIDES.get(company_id.lower())
+    if override:
+        return override
+    clean = re.sub(r'(?i)(External|Careers?|Jobs?|_[A-Z]{2}$)', '', tenant)
+    clean = clean.replace('_', ' ').strip()
+    words = re.sub(r'([a-z])([A-Z])', r'\1 \2', clean).split()
+    if len(words) >= 2:
+        return ' '.join(words)
+    return company_id.replace('-', ' ').title()
+
+
+def parse_workday_tenant(url):
+    m = _WD_URL_RE.match(url)
+    if not m:
+        return None
+    company_id = m.group(1).lower()
+    host_m = re.match(r'https?://([^/]+)', url)
+    if not host_m:
+        return None
+    host = host_m.group(1).lower()
+    tenant = m.group(2)
+    if tenant.lower() in _SKIP_TENANTS or len(tenant) < 3:
+        return None
+    return host, company_id, tenant
+
+
+def discover_tenants():
+    discovered = {}
+    candidate_urls = {}
+    for i, query in enumerate(DISCOVERY_QUERIES, 1):
+        log(f"  Discovery Exa [{i}/{len(DISCOVERY_QUERIES)}]: {query[:60]}...")
+        resp = exa_search(query, num_results=15, start_date=LOOKBACK_DATE, log=log)
+        if not resp:
+            continue
+        results = resp.get("results", [])
+        new = 0
+        for r in results:
+            url = (r.get("url") or "").strip()
+            parsed = parse_workday_tenant(url)
+            if parsed and parsed[0] not in discovered:
+                host, company_id, tenant = parsed
+                discovered[host] = (host, company_id, tenant, format_tenant_name(company_id, tenant))
+                new += 1
+            job_url = parse_workday_job_url(url)
+            if job_url:
+                host, company_id, tenant, external_path = job_url
+                candidate_urls[url] = {
+                    "host": host, "company_id": company_id, "tenant": tenant,
+                    "external_path": external_path,
+                    "fallback_company": format_tenant_name(company_id, tenant),
+                }
+        log(f"    → {len(results)} results, {new} new tenants")
+        time.sleep(1.5)
+    return list(discovered.values()), candidate_urls
+
+
+def wd_list_jobs(host, company_id, tenant, offset=0, limit=10):
+    url = f"https://{host}/wday/cxs/{company_id}/{tenant}/jobs"
+    body = json.dumps({"appliedFacets": {}, "limit": limit, "offset": offset, "searchText": ""})
+    cmd = [
+        "curl", "-s", "--max-time", "20",
+        "-X", "POST", url,
+        "-H", "Content-Type: application/json",
+        "-H", "Accept: application/json",
+        "-H", f"User-Agent: {UA}",
+        "-d", body,
+    ]
+    try:
+        result = subprocess.run(cmd, capture_output=True, timeout=25)
+        if result.returncode != 0:
+            return [], 0
+        data = json.loads(result.stdout)
+        if "total" not in data:
+            return [], 0
+        return data.get("jobPostings", []), data.get("total", 0)
+    except Exception as e:
+        log(f"  API error ({host}): {e}")
+        return [], 0
+
+
+def is_new_york(locations_text, external_path=""):
+    ep = (external_path or "").lower()
+    lt = (locations_text or "").lower()
+    if any(t in ep for t in _NON_NY_PATH_TERMS):
+        return False
+    return any(t in lt for t in NY_TERMS) or any(t in ep for t in _NY_PATH_TERMS)
+
+
+def parse_location(locations_text, external_path=""):
+    lt = (locations_text or "").lower()
+    city_map = {
+        "new york city": "New York City, NY", "manhattan": "Manhattan, NY",
+        "brooklyn": "Brooklyn, NY", "queens": "Queens, NY",
+        "albany": "Albany, NY", "buffalo": "Buffalo, NY",
+        "rochester": "Rochester, NY", "yonkers": "Yonkers, NY",
+        "long island": "Long Island, NY",
+    }
+    for city, label in city_map.items():
+        if city in lt:
+            return label
+    if "new york" in lt:
+        return "New York, NY"
+    return "New York, NY"
+
+
+def fetch_job_html(host, tenant, external_path, company_id=""):
+    if "myworkdaysite.com" in host:
+        url = f"https://{host}/en-US/recruiting/{company_id}/{tenant}{external_path}"
+    else:
+        url = f"https://{host}/en-US/{tenant}{external_path}"
+    req = urllib.request.Request(url)
+    req.add_header("User-Agent", UA)
+    req.add_header("Accept", "text/html,application/xhtml+xml,*/*;q=0.9")
+    req.add_header("Accept-Language", "en-US,en;q=0.9")
+    try:
+        with urllib.request.urlopen(req, timeout=18) as r:
+            return r.read().decode("utf-8", errors="ignore")
+    except Exception:
+        return None
+
+
+def fetch_job_html_from_url(url):
+    req = urllib.request.Request(url)
+    req.add_header("User-Agent", UA)
+    req.add_header("Accept", "text/html,application/xhtml+xml,*/*;q=0.9")
+    try:
+        with urllib.request.urlopen(req, timeout=18) as r:
+            return r.read().decode("utf-8", errors="ignore")
+    except Exception:
+        return None
+
+
+def parse_workday_job_url(url):
+    try:
+        parsed = urllib.parse.urlparse(url)
+    except Exception:
+        return None
+    netloc = (parsed.netloc or "").lower()
+    if "myworkdayjobs.com" not in netloc:
+        return None
+    host = netloc
+    company_id = host.split(".")[0]
+    parts = [p for p in (parsed.path or "").split("/") if p]
+    if not parts:
+        return None
+    tenant_idx = 1 if re.fullmatch(r"[a-z]{2}-[A-Z]{2}", parts[0]) else 0
+    if len(parts) <= tenant_idx + 1:
+        return None
+    tenant = parts[tenant_idx]
+    if parts[tenant_idx + 1].lower() != "job":
+        return None
+    external_path = "/" + "/".join(parts[tenant_idx + 1:])
+    return host, company_id, tenant, external_path
+
+
+def normalize_company_name(name):
+    if not name:
+        return name
+    name = _NUMERIC_PREFIX_RE.sub('', name).strip()
+    import html as _html
+    return _html.unescape(name)
+
+
+def extract_company_from_html(text):
+    if not text:
+        return None
+    ld_blocks = re.findall(
+        r'<script[^>]+type=["\']application/ld\+json["\'][^>]*>(.*?)</script>',
+        text, re.DOTALL | re.IGNORECASE
+    )
+    for block in ld_blocks:
+        try:
+            data = json.loads(block)
+            if isinstance(data, list):
+                data = data[0]
+            org = data.get("hiringOrganization", {})
+            name = org.get("name", "").strip()
+            if name and len(name) > 1 and not re.match(r'^Company\s+\d+\b', name):
+                return normalize_company_name(name)
+        except Exception:
+            continue
+    m = re.search(r'<meta[^>]+property=["\']og:site_name["\'][^>]+content=["\']([^"\']+)["\']',
+                  text, re.IGNORECASE)
+    if not m:
+        m = re.search(r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+property=["\']og:site_name["\']',
+                      text, re.IGNORECASE)
+    if m:
+        name = m.group(1).strip()
+        if name and name.lower() not in ('workday', 'myworkdayjobs.com'):
+            return normalize_company_name(name)
+    return None
+
+
+def extract_title_from_html(text):
+    if not text:
+        return None
+    ld_blocks = re.findall(
+        r'<script[^>]+type=["\']application/ld\+json["\'][^>]*>(.*?)</script>',
+        text, re.DOTALL | re.IGNORECASE
+    )
+    for block in ld_blocks:
+        try:
+            data = json.loads(block)
+            if isinstance(data, list):
+                data = data[0]
+            name = (data.get("title") or data.get("name") or "").strip()
+            if name:
+                return name
+        except Exception:
+            continue
+    for pattern in (
+        r'<meta[^>]+property=["\']og:title["\'][^>]+content=["\']([^"\']+)["\']',
+        r'<title>(.*?)</title>',
+    ):
+        m = re.search(pattern, text, re.IGNORECASE | re.DOTALL)
+        if m:
+            title = re.sub(r'\s+', ' ', m.group(1)).strip()
+            title = re.sub(r'\s*[-|]\s*Workday.*$', '', title, flags=re.IGNORECASE)
+            if title:
+                return title
+    return None
+
+
+def extract_posted_from_html(text):
+    if not text:
+        return TODAY
+    ld_blocks = re.findall(
+        r'<script[^>]+type=["\']application/ld\+json["\'][^>]*>(.*?)</script>',
+        text, re.DOTALL | re.IGNORECASE
+    )
+    for block in ld_blocks:
+        try:
+            data = json.loads(block)
+            if isinstance(data, list):
+                data = data[0]
+            posted = str(data.get("datePosted") or "").strip()
+            m = re.search(r'(\d{4}-\d{2}-\d{2})', posted)
+            if m:
+                return m.group(1)
+        except Exception:
+            continue
+    return TODAY
+
+
+def extract_salary(text):
+    if not text:
+        return None
+    for pattern in SALARY_RE:
+        m = pattern.search(text)
+        if m:
+            try:
+                raw_min = m.group(1).replace(",", "")
+                raw_max = m.group(2).replace(",", "")
+                if "k" in m.group(0).lower():
+                    val_min = int(float(raw_min) * 1000)
+                    val_max = int(float(raw_max) * 1000)
+                else:
+                    val_min = int(float(raw_min))
+                    val_max = int(float(raw_max))
+                if 30_000 <= val_min <= 2_000_000 and val_min < val_max:
+                    return val_min, val_max
+            except (ValueError, IndexError):
+                continue
+    return None
+
+
+def main():
+    if not acquire_lock(LOCK_FILE, log):
+        return 1
+
+    log("=== NY Workday scraper started ===")
+    log(f"Output: {OUTPUT_FILE}")
+
+    log(f"Seed tenants: {len(SEED_TENANTS)} | Running Exa discovery...")
+    discovered, candidate_urls = discover_tenants()
+
+    seed_hosts = {t[0] for t in SEED_TENANTS}
+    extra = [t for t in discovered if t[0] not in seed_hosts]
+    all_tenants = SEED_TENANTS + extra
+    log(f"Total tenants: {len(all_tenants)} ({len(SEED_TENANTS)} seed + {len(extra)} discovered)")
+
+    existing_keys = load_existing_keys()
+    seen_keys = set(existing_keys)
+    os.makedirs(os.path.dirname(OUTPUT_FILE), exist_ok=True)
+
+    total_found = 0
+    api_failures = 0
+    failed_hosts = set()
+
+    for host, company_id, tenant, company_name in all_tenants:
+        log(f"\n── {company_name} ({host}) ──")
+        ny_jobs = []
+        offset = 0
+        limit = 10
+        max_pages = 10
+        known_total = 0
+
+        while offset // limit < max_pages:
+            postings, total = wd_list_jobs(host, company_id, tenant, offset, limit)
+            if not postings:
+                if offset == 0:
+                    api_failures += 1
+                    failed_hosts.add(host)
+                break
+            if total > 0:
+                known_total = total
+            log(f"  API offset={offset}: {len(postings)} postings (total={total})")
+            for p in postings:
+                if is_new_york(p.get("locationsText", ""), p.get("externalPath", "")):
+                    ny_jobs.append(p)
+            offset += limit
+            if known_total > 0 and offset >= known_total:
+                break
+            time.sleep(2)
+
+        log(f"  NY jobs: {len(ny_jobs)}")
+
+        for i, posting in enumerate(ny_jobs, 1):
+            title    = posting.get("title", "").strip()
+            ext_path = posting.get("externalPath", "")
+            posted_on = posting.get("postedOn", TODAY)
+            locations = posting.get("locationsText", "")
+
+            key = f"{title.lower()}|{company_name.lower()}"
+            if key in seen_keys:
+                continue
+
+            log(f"  [{i}/{len(ny_jobs)}] {title[:55]}")
+            text = fetch_job_html(host, tenant, ext_path, company_id=company_id)
+            if not text:
+                log("    → fetch failed")
+                time.sleep(0.5)
+                continue
+
+            salary = extract_salary(text)
+            if not salary:
+                log("    → no salary")
+                time.sleep(0.3)
+                continue
+
+            val_min, val_max = salary
+            location = parse_location(locations, ext_path)
+            source_url = f"https://{host}/en-US/{tenant}{ext_path}"
+            resolved_company = extract_company_from_html(text) or company_name
+
+            posted = TODAY
+            date_match = re.search(r'(\d{4}-\d{2}-\d{2})', posted_on or "")
+            if date_match:
+                posted = date_match.group(1)
+
+            job = {
+                "role":            title,
+                "company":         resolved_company,
+                "min":             val_min,
+                "max":             val_max,
+                "location":        location,
+                "source_url":      source_url,
+                "posted":          posted,
+                "source_platform": "workday",
+            }
+
+            seen_keys.add(key)
+            write_job(OUTPUT_FILE, job)
+            total_found += 1
+            log(f"    → FOUND: ${val_min:,}–${val_max:,} [{location}]")
+            time.sleep(0.8)
+
+        time.sleep(60)
+
+    log(
+        f"\n=== NY Workday scraper complete: {total_found} new jobs "
+        f"(api_failures={api_failures}) ==="
+    )
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())
