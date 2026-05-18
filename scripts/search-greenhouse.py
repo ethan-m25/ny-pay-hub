@@ -168,12 +168,19 @@ _CANADA_EXCL = [
     "remote - ontario", "remote - british columbia", "remote - quebec",
 ]
 
+_REMOTE_TERMS = ("remote", "distributed", "virtual", "anywhere", "work from", "wfh")
+
 def is_ny_job(title: str, location: str, content: str) -> bool:
     loc_low = location.lower()
     if any(t in loc_low for t in _CANADA_EXCL):
         return False
-    combined = f"{title} {location} {content}".lower()
-    return any(term in combined for term in NY_TERMS)
+    # Location-first: only match if location field explicitly names NY
+    if any(t in loc_low for t in NY_TERMS):
+        return True
+    # Remote/unspecified jobs are NY-eligible (NY law covers remote roles open to NY workers)
+    if not loc_low or any(r in loc_low for r in _REMOTE_TERMS):
+        return True
+    return False
 
 
 def fetch_company_jobs(slug: str, company_name_override=None):
