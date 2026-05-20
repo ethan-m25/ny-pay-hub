@@ -1,0 +1,65 @@
+{
+  "last_checked": "2026-05-20",
+  "employers": {
+    "JPMorgan Chase": {
+      "count": 0,
+      "first_seen": null,
+      "checked": "2026-05-20"
+    },
+    "Goldman Sachs": {
+      "count": 1,
+      "first_seen": "2026-05-20",
+      "checked": "2026-05-20"
+    },
+    "Citigroup": {
+      "count": 0,
+      "first_seen": null,
+      "checked": "2026-05-20"
+    },
+    "Morgan Stanley": {
+      "count": 0,
+      "first_seen": null,
+      "checked": "2026-05-20"
+    },
+    "Pfizer": {
+      "count": 21,
+      "first_seen": "2026-05-20",
+      "checked": "2026-05-20"
+    },
+    "Verizon": {
+      "count": 0,
+      "first_seen": null,
+      "checked": "2026-05-20"
+    },
+    "IBM": {
+      "count": 0,
+      "first_seen": null,
+      "checked": "2026-05-20"
+    },
+    "New York Times": {
+      "count": 0,
+      "first_seen": null,
+      "checked": "2026-05-20"
+    },
+    "Bloomberg": {
+      "count": 0,
+      "first_seen": null,
+      "checked": "2026-05-20"
+    },
+    "BlackRock": {
+      "count": 0,
+      "first_seen": null,
+      "checked": "2026-05-20"
+    },
+    "AIG": {
+      "count": 0,
+      "first_seen": null,
+      "checked": "2026-05-20"
+    },
+    "MTA": {
+      "count": 0,
+      "first_seen": null,
+      "checked": "2026-05-20"
+    }
+  }
+}
