@@ -1,0 +1,87 @@
+{
+  "generated": "2026-05-20",
+  "categories": {
+    "Engineering": {
+      "cat_median": 213000,
+      "n_jobs": 255,
+      "skills": []
+    },
+    "Other": {
+      "cat_median": 175480,
+      "n_jobs": 174,
+      "skills": [
+        {
+          "skill": "javascript",
+          "median": 124250,
+          "n": 2,
+          "dev": -29.2
+        }
+      ]
+    },
+    "Management": {
+      "cat_median": 188530,
+      "n_jobs": 160,
+      "skills": []
+    },
+    "Product": {
+      "cat_median": 208708,
+      "n_jobs": 78,
+      "skills": [
+        {
+          "skill": "strategic planning",
+          "median": 270000,
+          "n": 3,
+          "dev": 29.4
+        },
+        {
+          "skill": "cross-functional collaboration",
+          "median": 270000,
+          "n": 3,
+          "dev": 29.4
+        },
+        {
+          "skill": "technical depth",
+          "median": 270000,
+          "n": 2,
+          "dev": 29.4
+        },
+        {
+          "skill": "high-growth fintech",
+          "median": 270000,
+          "n": 2,
+          "dev": 29.4
+        },
+        {
+          "skill": "business impact",
+          "median": 270000,
+          "n": 2,
+          "dev": 29.4
+        },
+        {
+          "skill": "technical fluency",
+          "median": 270000,
+          "n": 2,
+          "dev": 29.4
+        }
+      ]
+    },
+    "Data & Analytics": {
+      "cat_median": 168000,
+      "n_jobs": 78,
+      "skills": [
+        {
+          "skill": "health_insurance",
+          "median": 145999,
+          "n": 2,
+          "dev": -13.1
+        },
+        {
+          "skill": "javascript",
+          "median": 145999,
+          "n": 2,
+          "dev": -13.1
+        }
+      ]
+    }
+  }
+}

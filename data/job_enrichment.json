@@ -1,0 +1,180 @@
+{
+  "meta": {
+    "built_at": "2026-05-20T23:44:45.304675+00:00",
+    "total_jobs": 921,
+    "enriched": 9
+  },
+  "jobs": {
+    "systems-engineer-virtu-39717152": {
+      "summary": "System engineer responsible for designing, building, and supporting high-performance Linux servers globally to ensure optimal trading platform functionality.",
+      "key_skills": [
+        "linux",
+        "unix",
+        "kernel",
+        "networking",
+        "scripting",
+        "ansible",
+        "yum",
+        "git"
+      ],
+      "core_skills": [
+        "linux administration",
+        "kernel tuning",
+        "network protocols",
+        "scripting"
+      ],
+      "seniority_signal": "senior",
+      "role_type": "ic",
+      "red_flags": [],
+      "work_mode_derived": "onsite"
+    },
+    "technical-recruiter-virtu-39717152": {
+      "summary": "Develops and maintains trading infrastructure and applications using programming languages such as Java, Python, C++, and C#.",
+      "key_skills": [
+        "python",
+        "java",
+        "c++",
+        "c#",
+        "javascript",
+        "react",
+        "sql",
+        "java"
+      ],
+      "core_skills": [
+        "python",
+        "java",
+        "c++",
+        "c#"
+      ],
+      "seniority_signal": "entry",
+      "role_type": "ic",
+      "red_flags": [],
+      "work_mode_derived": "onsite"
+    },
+    "banking-relationship-brex-39717152": {
+      "summary": "Partners directly with Founders, Co-Founders, C-Suite Executives, VPs of Finance, and Controllers to upsell business account suite products and increase total AUM for Brex.",
+      "key_skills": [
+        "sales",
+        "financial_services",
+        "fintech",
+        "customer_relationships",
+        "upselling",
+        "revenue_growth",
+        "aum_management",
+        "treasury"
+      ],
+      "core_skills": [
+        "sales",
+        "financial_services",
+        "fintech",
+        "customer_relationships"
+      ],
+      "seniority_signal": "mid",
+      "role_type": "ic",
+      "red_flags": [],
+      "work_mode_derived": "hybrid"
+    },
+    "group-product-manage-brex-39717152": {
+      "summary": "Owns multi-quarter vision and strategy for a core product area, sets priorities, manages PM teams, and drives cross-functional initiatives to deliver business impact using AI tools.",
+      "key_skills": [
+        "product management",
+        "ai tools",
+        "strategic planning",
+        "cross-functional collaboration",
+        "prioritization",
+        "scaling judgment",
+        "team development",
+        "data-driven decision making"
+      ],
+      "core_skills": [
+        "strategic planning",
+        "cross-functional collaboration",
+        "prioritization",
+        "data-driven decision making"
+      ],
+      "seniority_signal": "senior",
+      "role_type": "ic",
+      "red_flags": [],
+      "work_mode_derived": "hybrid"
+    },
+    "staff-product-manage-brex-39717152": {
+      "summary": "Staff Product Manager at Brex defines and drives multi-quarter product strategy for critical domains, leading cross-functional initiatives to deliver step-function improvements in customer value, revenue, efficiency, and distribution while influencing senior leaders and elevating product standards across the organization.",
+      "key_skills": [
+        "product management",
+        "strategic planning",
+        "technical depth",
+        "data analysis",
+        "financial infrastructure",
+        "cross-functional collaboration",
+        "business impact",
+        "high-growth fintech"
+      ],
+      "core_skills": [
+        "strategic rigor",
+        "technical fluency",
+        "data-driven decision making",
+        "executive communication"
+      ],
+      "seniority_signal": "staff",
+      "role_type": "ic",
+      "red_flags": [],
+      "work_mode_derived": "hybrid"
+    },
+    "associate--individua-oscar-39717152": {
+      "summary": "Develops and maintains JavaScript-based health insurance applications",
+      "key_skills": [
+        "javascript",
+        "health_insurance"
+      ],
+      "core_skills": [
+        "javascript"
+      ],
+      "seniority_signal": "entry",
+      "role_type": "ic",
+      "red_flags": [],
+      "work_mode_derived": "unknown"
+    },
+    "senior-analyst--paym-oscar-39717152": {
+      "summary": "Develops and maintains JavaScript-based health insurance applications",
+      "key_skills": [
+        "javascript",
+        "health_insurance"
+      ],
+      "core_skills": [
+        "javascript"
+      ],
+      "seniority_signal": "entry",
+      "role_type": "ic",
+      "red_flags": [],
+      "work_mode_derived": "unknown"
+    },
+    "senior-manager--data-oscar-39717152": {
+      "summary": "Develops and maintains JavaScript-based health insurance applications",
+      "key_skills": [
+        "javascript",
+        "health_insurance"
+      ],
+      "core_skills": [
+        "javascript"
+      ],
+      "seniority_signal": "entry",
+      "role_type": "ic",
+      "red_flags": [],
+      "work_mode_derived": "unknown"
+    },
+    "senior-manager--empl-oscar-39717152": {
+      "summary": "Develops and maintains JavaScript-based health insurance applications",
+      "key_skills": [
+        "javascript",
+        "health_insurance"
+      ],
+      "core_skills": [
+        "javascript"
+      ],
+      "seniority_signal": "entry",
+      "role_type": "ic",
+      "red_flags": [],
+      "work_mode_derived": "unknown"
+    }
+  }
+}
