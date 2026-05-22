@@ -1,8 +1,8 @@
 {
   "meta": {
-    "built_at": "2026-05-21T08:41:19.995975+00:00",
-    "total_jobs": 947,
-    "enriched": 117
+    "built_at": "2026-05-22T08:22:51.915756+00:00",
+    "total_jobs": 984,
+    "enriched": 142
   },
   "jobs": {
     "compliance-officer-virtu-39717152": {
@@ -231,6 +231,30 @@
         "data-driven decision making"
       ],
       "seniority_signal": "senior",
+      "role_type": "ic",
+      "red_flags": [],
+      "work_mode_derived": "hybrid"
+    },
+    "implementation-consu-brex-39717152": {
+      "summary": "Implementation Consultant I supports small to mid-sized customers through onboarding journey with guidance and structured support to get them up and running on Brex.",
+      "key_skills": [
+        "implementation",
+        "consulting",
+        "customer",
+        "project",
+        "management",
+        "technical",
+        "process",
+        "change"
+      ],
+      "core_skills": [
+        "customer",
+        "project",
+        "implementation",
+        "technical",
+        "process"
+      ],
+      "seniority_signal": "entry",
       "role_type": "ic",
       "red_flags": [],
       "work_mode_derived": "hybrid"
@@ -2210,6 +2234,86 @@
       "red_flags": [],
       "work_mode_derived": "onsite"
     },
+    "senior-cpu-design-ve-google-87846724": {
+      "summary": "Drives silicon design verification using UVM and SystemVerilog to ensure hardware functionality and performance.",
+      "key_skills": [
+        "cpu",
+        "verification",
+        "design",
+        "silicon",
+        "uvm",
+        "systemverilog",
+        "low-power",
+        "arm"
+      ],
+      "core_skills": [
+        "verification",
+        "systemverilog",
+        "uvm",
+        "low-power"
+      ],
+      "seniority_signal": "senior",
+      "role_type": "ic",
+      "red_flags": [],
+      "work_mode_derived": "hybrid"
+    },
+    "software-engineer-ma-google-87846724": {
+      "summary": "Owning outcomes and decision making, solving ambiguous problems, and influencing stakeholders while managing technical teams and system architecture.",
+      "key_skills": [
+        "software engineering",
+        "manager",
+        "google cloud",
+        "systems architecture",
+        "system design",
+        "team management",
+        "people management",
+        "prioritization"
+      ],
+      "core_skills": [
+        "systems architecture",
+        "system design",
+        "team management",
+        "people management"
+      ],
+      "seniority_signal": "senior",
+      "role_type": "manager",
+      "red_flags": [],
+      "work_mode_derived": "hybrid"
+    },
+    "administrative-busin-google-87846724": {
+      "summary": "Resolves operational and administrative issues for teams by anticipating needs and managing calendar, travel, and expense tasks.",
+      "key_skills": [
+        "administrative",
+        "business",
+        "partner"
+      ],
+      "core_skills": [
+        "organizational",
+        "analytical"
+      ],
+      "seniority_signal": "early",
+      "role_type": "ic",
+      "red_flags": [],
+      "work_mode_derived": "unknown"
+    },
+    "strategy-and-operati-google-87846724": {
+      "summary": "Drives progress, solves problems, and mentors junior team members with expertise in business strategy and operations.",
+      "key_skills": [
+        "strategy",
+        "operations",
+        "brand",
+        "reputation",
+        "gtm"
+      ],
+      "core_skills": [
+        "strategy",
+        "operations"
+      ],
+      "seniority_signal": "mid",
+      "role_type": "ic",
+      "red_flags": [],
+      "work_mode_derived": "hybrid"
+    },
     "head-of-customer-eng-google-87846724": {
       "summary": "Owes outcomes and decision making, solving ambiguous problems and influencing stakeholders with deep expertise in domain.",
       "key_skills": [
@@ -2262,6 +2366,104 @@
       "red_flags": [],
       "work_mode_derived": "hybrid"
     },
+    "partner-enablement-l-google-87846724": {
+      "summary": "The Partner Enablement Lead educates agency partners on Global Product Priorities and gTech Media and Tech Services to improve customer activation and business growth.",
+      "key_skills": [
+        "partner enablement",
+        "gtech",
+        "advertising",
+        "media",
+        "technical services",
+        "customer support",
+        "product management",
+        "cross-functional"
+      ],
+      "core_skills": [
+        "product management",
+        "cross-functional collaboration",
+        "stakeholder engagement",
+        "media landscape"
+      ],
+      "seniority_signal": "mid",
+      "role_type": "manager",
+      "red_flags": [],
+      "work_mode_derived": "hybrid"
+    },
+    "marketing-manager--g-google-87846724": {
+      "summary": "Drives marketing initiatives for Google Cloud's partner ecosystem to build partner mindshare, loyalty, and advocacy in the market.",
+      "key_skills": [
+        "marketing",
+        "partner",
+        "global",
+        "experiences",
+        "google",
+        "cloud"
+      ],
+      "core_skills": [
+        "project_management",
+        "stakeholder_management"
+      ],
+      "seniority_signal": "mid",
+      "role_type": "manager",
+      "red_flags": [],
+      "work_mode_derived": "hybrid"
+    },
+    "social-marketing-man-google-87846725": {
+      "summary": "Drives social marketing campaigns for Gen Z brands on YouTube, leveraging AI insights and data analysis to create engaging content and influencer partnerships.",
+      "key_skills": [
+        "social marketing",
+        "youtube marketing",
+        "influencer campaigns",
+        "gen z brands",
+        "data analysis",
+        "ai insights",
+        "content strategy",
+        "cross-functional collaboration"
+      ],
+      "core_skills": [
+        "marketing strategy",
+        "campaign execution",
+        "stakeholder management",
+        "data-driven decision making"
+      ],
+      "seniority_signal": "mid",
+      "role_type": "ic",
+      "red_flags": [],
+      "work_mode_derived": "hybrid"
+    },
+    "customer-engineer-iv-google-87846725": {
+      "summary": "Owning outcomes and decision making, solving ambiguous problems and influencing stakeholders with deep expertise in domain.",
+      "key_skills": [
+        "networking",
+        "google cloud"
+      ],
+      "core_skills": [
+        "networking"
+      ],
+      "seniority_signal": "senior",
+      "role_type": "ic",
+      "red_flags": [],
+      "work_mode_derived": "hybrid"
+    },
+    "global-product-lead--google-87846725": {
+      "summary": "Drives product innovation and go-to-market strategies by analyzing customer data and building technical infrastructure for growth.",
+      "key_skills": [
+        "product",
+        "go-to-market",
+        "innovation",
+        "google"
+      ],
+      "core_skills": [
+        "product_management",
+        "data_analysis",
+        "system_design",
+        "product_design"
+      ],
+      "seniority_signal": "mid",
+      "role_type": "ic",
+      "red_flags": [],
+      "work_mode_derived": "hybrid"
+    },
     "manager--knowledge-a-google-87846725": {
       "summary": "Owning outcomes and decision making, solving ambiguous problems and influencing stakeholders with deep expertise in domain.",
       "key_skills": [
@@ -2277,6 +2479,49 @@
       ],
       "seniority_signal": "senior",
       "role_type": "manager",
+      "red_flags": [],
+      "work_mode_derived": "remote"
+    },
+    "ux-researcher--xr-ux-google-87846725": {
+      "summary": "UX Researcher conducts primary research to gather insights and create industry-leading products by exploring user behaviors and motivations through field studies, interviews, diary studies, ethnography, surveys, usability testing, and logs analysis.",
+      "key_skills": [
+        "ux research",
+        "research methods",
+        "user experience",
+        "product development",
+        "ai"
+      ],
+      "core_skills": [
+        "research methods",
+        "user experience",
+        "product development",
+        "ai"
+      ],
+      "seniority_signal": "mid",
+      "role_type": "ic",
+      "red_flags": [],
+      "work_mode_derived": "hybrid"
+    },
+    "reporting-lead-techn-google-87846725": {
+      "summary": "Reporting Lead Technical Program Manager develops and maintains dashboards and reports for compliance, risk management, and audit purposes while coordinating cross-functional teams to ensure security, risk, and resiliency are integrated into Google's critical infrastructure.",
+      "key_skills": [
+        "reporting",
+        "data_analysis",
+        "business_intelligence",
+        "technical_program_management",
+        "data_visualization",
+        "dashboards",
+        "data_quality",
+        "data_governance"
+      ],
+      "core_skills": [
+        "reporting",
+        "data_analysis",
+        "business_intelligence",
+        "technical_program_management"
+      ],
+      "seniority_signal": "mid",
+      "role_type": "ic",
       "red_flags": [],
       "work_mode_derived": "remote"
     },
@@ -2395,6 +2640,29 @@
       "red_flags": [],
       "work_mode_derived": "hybrid"
     },
+    "commercial-strategy--google-87846726": {
+      "summary": "Drives progress, solves problems, and mentors junior team members with deep expertise in commercial strategy and operations.",
+      "key_skills": [
+        "commercial strategy",
+        "operations",
+        "strategic business analysis",
+        "data analysis",
+        "root cause analysis",
+        "kpi analysis",
+        "market analysis",
+        "business modeling"
+      ],
+      "core_skills": [
+        "strategic business analysis",
+        "data analysis",
+        "root cause analysis",
+        "kpi analysis"
+      ],
+      "seniority_signal": "senior",
+      "role_type": "ic",
+      "red_flags": [],
+      "work_mode_derived": "hybrid"
+    },
     "senior-research-scie-google-87846726": {
       "summary": "Drives research agendas, leads research efforts, and mentors junior team members while applying advanced computer science techniques to develop new products and technologies.",
       "key_skills": [
@@ -2418,6 +2686,29 @@
       "red_flags": [],
       "work_mode_derived": "remote"
     },
+    "marketing-manager--a-google-87846726": {
+      "summary": "Drives marketing strategy for AI products by creating content, managing creative production, and collaborating with cross-functional teams to improve user engagement and product growth.",
+      "key_skills": [
+        "ai",
+        "marketing",
+        "content",
+        "product",
+        "program",
+        "management",
+        "creative",
+        "process"
+      ],
+      "core_skills": [
+        "ai",
+        "marketing",
+        "content",
+        "product"
+      ],
+      "seniority_signal": "mid",
+      "role_type": "manager",
+      "red_flags": [],
+      "work_mode_derived": "remote"
+    },
     "software-engineer-cl-google-87846726": {
       "summary": "Software engineers develop next-generation technologies for Google Cloud, solving problems and mentoring junior team members while working on critical projects.",
       "key_skills": [
@@ -2432,6 +2723,24 @@
       "role_type": "ic",
       "red_flags": [],
       "work_mode_derived": "unknown"
+    },
+    "senior-product-marke-google-87846726": {
+      "summary": "Drives product marketing strategy for Google Maps Platform, including positioning, naming, competitive analysis, and feature prioritization while collaborating with sales, engineering, and product teams.",
+      "key_skills": [
+        "product marketing",
+        "gtm",
+        "geospatial",
+        "google cloud",
+        "cross-functional"
+      ],
+      "core_skills": [
+        "product marketing strategy",
+        "cross-functional collaboration"
+      ],
+      "seniority_signal": "senior",
+      "role_type": "ic",
+      "red_flags": [],
+      "work_mode_derived": "hybrid"
     },
     "mechanical-engineer--google-87846726": {
       "summary": "Designs and commissions mission critical data center mechanical equipment and cooling systems",
@@ -2472,6 +2781,220 @@
       "role_type": "manager",
       "red_flags": [],
       "work_mode_derived": "hybrid"
+    },
+    "cloud-customer-engin-google-87846726": {
+      "summary": "Partners with technical Sales teams to differentiate Google Cloud to customers, serves as primary technical partner and trusted advisor, troubleshoots technical issues, engages in proofs of concepts and demos, architects cross-pillar cloud solutions, drives technical wins and delivery plans, presents solutions to technical and business leaders.",
+      "key_skills": [
+        "cloud",
+        "customer",
+        "engineering",
+        "platform"
+      ],
+      "core_skills": [
+        "technical",
+        "sales",
+        "problem",
+        "solving"
+      ],
+      "seniority_signal": "mid",
+      "role_type": "ic",
+      "red_flags": [],
+      "work_mode_derived": "onsite"
+    },
+    "staff-data-scientist-google-87846726": {
+      "summary": "Works on evaluation, metrics, and user insights for AI answers within Search Health, influencing product and engineering decisions through data-driven insights.",
+      "key_skills": [
+        "data science",
+        "machine learning",
+        "statistical analysis",
+        "python",
+        "sql",
+        "r",
+        "large language models",
+        "llm"
+      ],
+      "core_skills": [
+        "data analysis",
+        "problem solving",
+        "statistical modeling",
+        "machine learning"
+      ],
+      "seniority_signal": "staff",
+      "role_type": "ic",
+      "red_flags": [],
+      "work_mode_derived": "hybrid"
+    },
+    "staff-software-devel-google-87846726": {
+      "summary": "Works on AI/ML projects related to safety and security, building LLM-based safety and security auto-raters and critical classifiers for prompt injection attacks.",
+      "key_skills": [
+        "ai/ml",
+        "safety",
+        "security",
+        "software",
+        "developer"
+      ],
+      "core_skills": [
+        "ml",
+        "genai",
+        "model",
+        "deployment"
+      ],
+      "seniority_signal": "staff",
+      "role_type": "ic",
+      "red_flags": [],
+      "work_mode_derived": "unknown"
+    },
+    "research-scientist-e-google-87846727": {
+      "summary": "Research Scientist designs and implements production-grade security AI/ML systems using Python and ML frameworks to detect threats and vulnerabilities in autonomous systems.",
+      "key_skills": [
+        "research",
+        "security",
+        "autonomous",
+        "ai",
+        "machine_learning",
+        "deepmind",
+        "google"
+      ],
+      "core_skills": [
+        "python",
+        "ml_frameworks"
+      ],
+      "seniority_signal": "staff",
+      "role_type": "ic",
+      "red_flags": [],
+      "work_mode_derived": "remote"
+    },
+    "ux-designer-google-87846727": {
+      "summary": "Technical Account Manager at Google Cloud Consulting handles customer relationships and cloud infrastructure solutions.",
+      "key_skills": [
+        "technical account manager",
+        "google cloud",
+        "customer engineering",
+        "solutions engineering",
+        "software engineering",
+        "program management",
+        "ai",
+        "machine learning"
+      ],
+      "core_skills": [
+        "google cloud",
+        "ai",
+        "machine learning"
+      ],
+      "seniority_signal": "senior",
+      "role_type": "ic",
+      "red_flags": [],
+      "work_mode_derived": "remote"
+    },
+    "product-solutions-en-google-87846727": {
+      "summary": "Product Solutions Engineer works with customer support and logistics platforms to ensure stability, scalability, and efficiency of systems.",
+      "key_skills": [
+        "product",
+        "solutions",
+        "engineer",
+        "google",
+        "store",
+        "fi"
+      ],
+      "core_skills": [
+        "technical",
+        "expertise",
+        "troubleshooting",
+        "client"
+      ],
+      "seniority_signal": "mid",
+      "role_type": "ic",
+      "red_flags": [],
+      "work_mode_derived": "unknown"
+    },
+    "software-engineer-ii-google-87846727": {
+      "summary": "Software engineer develops next-generation technologies for billions of users, working on critical projects with opportunities to switch teams and projects as the business evolves.",
+      "key_skills": [
+        "c++",
+        "python",
+        "java",
+        "data structures",
+        "algorithms",
+        "performance",
+        "large scale systems",
+        "data analysis"
+      ],
+      "core_skills": [
+        "software engineering",
+        "system design",
+        "debugging",
+        "testing"
+      ],
+      "seniority_signal": "mid",
+      "role_type": "ic",
+      "red_flags": [],
+      "work_mode_derived": "onsite"
+    },
+    "senior-interaction-d-google-87846727": {
+      "summary": "Senior Interaction Designer at Google YouTube focuses on defining privacy standards and building user trust through intuitive, age-appropriate experiences for billions of users across YouTube Kids, Community, and Creator Studio.",
+      "key_skills": [
+        "interaction design",
+        "user experience",
+        "visual design",
+        "design systems",
+        "cross-functional collaboration",
+        "prototyping",
+        "content strategy",
+        "regulatory compliance"
+      ],
+      "core_skills": [
+        "user-centered design",
+        "prototyping",
+        "cross-functional collaboration",
+        "regulatory compliance"
+      ],
+      "seniority_signal": "senior",
+      "role_type": "ic",
+      "red_flags": [],
+      "work_mode_derived": "hybrid"
+    },
+    "strategic-missions-a-google-87846727": {
+      "summary": "Strategic Missions and Partnerships Sales Leader leads early-stage blockchain rollout in financial services to modernize global systems and boost capital efficiency.",
+      "key_skills": [
+        "strategic",
+        "missions",
+        "partnerships",
+        "sales",
+        "leader"
+      ],
+      "core_skills": [
+        "sales",
+        "leadership",
+        "strategy",
+        "blockchain"
+      ],
+      "seniority_signal": "senior",
+      "role_type": "executive",
+      "red_flags": [],
+      "work_mode_derived": "remote"
+    },
+    "senior-clinical-spec-google-87846727": {
+      "summary": "Senior Clinical Specialist evaluates AI health products from concept to real-world implementation, ensuring safety, quality, and efficacy through mixed methods.",
+      "key_skills": [
+        "clinical",
+        "ai",
+        "evaluations",
+        "health",
+        "digital",
+        "healthcare",
+        "data",
+        "science"
+      ],
+      "core_skills": [
+        "clinical",
+        "ai",
+        "evaluations",
+        "health"
+      ],
+      "seniority_signal": "senior",
+      "role_type": "ic",
+      "red_flags": [],
+      "work_mode_derived": "remote"
     }
   }
 }
