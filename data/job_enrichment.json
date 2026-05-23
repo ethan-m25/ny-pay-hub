@@ -1,8 +1,8 @@
 {
   "meta": {
-    "built_at": "2026-05-22T08:22:51.915756+00:00",
-    "total_jobs": 984,
-    "enriched": 142
+    "built_at": "2026-05-23T08:17:27.791574+00:00",
+    "total_jobs": 1016,
+    "enriched": 164
   },
   "jobs": {
     "compliance-officer-virtu-39717152": {
@@ -2464,6 +2464,26 @@
       "red_flags": [],
       "work_mode_derived": "hybrid"
     },
+    "strategic-deal-prici-google-87846725": {
+      "summary": "Structures large agreements and go-to-market constructs to drive Google Cloud's revenue and profitability while ensuring risk mitigation and operational feasibility.",
+      "key_skills": [
+        "strategic pricing",
+        "monetization",
+        "deal structuring",
+        "agreements",
+        "gto"
+      ],
+      "core_skills": [
+        "business strategy",
+        "cloud",
+        "sales operations",
+        "pricing"
+      ],
+      "seniority_signal": "principal",
+      "role_type": "ic",
+      "red_flags": [],
+      "work_mode_derived": "remote"
+    },
     "manager--knowledge-a-google-87846725": {
       "summary": "Owning outcomes and decision making, solving ambiguous problems and influencing stakeholders with deep expertise in domain.",
       "key_skills": [
@@ -2568,6 +2588,24 @@
       ],
       "seniority_signal": "senior",
       "role_type": "executive",
+      "red_flags": [],
+      "work_mode_derived": "remote"
+    },
+    "technical-program-ma-google-87846726": {
+      "summary": "Manages technical account relationships and cloud consulting services for enterprise clients.",
+      "key_skills": [
+        "technical",
+        "account",
+        "manager",
+        "cloud",
+        "consulting"
+      ],
+      "core_skills": [
+        "cloud",
+        "consulting"
+      ],
+      "seniority_signal": "senior",
+      "role_type": "manager",
       "red_flags": [],
       "work_mode_derived": "remote"
     },
@@ -2824,6 +2862,28 @@
       "red_flags": [],
       "work_mode_derived": "hybrid"
     },
+    "staff-data-center-me-google-87846726": {
+      "summary": "Designs and maintains mission-critical data center mechanical infrastructure systems with expertise in thermal and hydraulic modeling, pipe stress analysis, and construction safety.",
+      "key_skills": [
+        "data center",
+        "mechanical engineering",
+        "infrastructure",
+        "thermal modeling",
+        "hydraulic modeling",
+        "pipe stress analysis",
+        "construction safety",
+        "qaqc"
+      ],
+      "core_skills": [
+        "mechanical infrastructure",
+        "mission critical facilities",
+        "engineering analysis"
+      ],
+      "seniority_signal": "staff",
+      "role_type": "ic",
+      "red_flags": [],
+      "work_mode_derived": "remote"
+    },
     "staff-software-devel-google-87846726": {
       "summary": "Works on AI/ML projects related to safety and security, building LLM-based safety and security auto-raters and critical classifiers for prompt injection attacks.",
       "key_skills": [
@@ -2843,6 +2903,29 @@
       "role_type": "ic",
       "red_flags": [],
       "work_mode_derived": "unknown"
+    },
+    "director--ux-researc-google-87846726": {
+      "summary": "Directs user research and content design teams to drive Google Search experiences by balancing product development needs with user needs research and generative AI impact.",
+      "key_skills": [
+        "ux research",
+        "search verticals",
+        "user experience",
+        "research methods",
+        "content design",
+        "generative ai",
+        "product management",
+        "design"
+      ],
+      "core_skills": [
+        "research leadership",
+        "user research",
+        "content design",
+        "product strategy"
+      ],
+      "seniority_signal": "senior",
+      "role_type": "ic",
+      "red_flags": [],
+      "work_mode_derived": "hybrid"
     },
     "research-scientist-e-google-87846727": {
       "summary": "Research Scientist designs and implements production-grade security AI/ML systems using Python and ML frameworks to detect threats and vulnerabilities in autonomous systems.",
@@ -2907,6 +2990,22 @@
       "red_flags": [],
       "work_mode_derived": "unknown"
     },
+    "program-manager-iii--google-87846727": {
+      "summary": "Leads complex multi-disciplinary projects in UX research operations, managing panel-building strategies for YouTube's user research participant recruitment.",
+      "key_skills": [
+        "program management",
+        "ux research",
+        "operations"
+      ],
+      "core_skills": [
+        "project management",
+        "cross-functional collaboration"
+      ],
+      "seniority_signal": "mid",
+      "role_type": "ic",
+      "red_flags": [],
+      "work_mode_derived": "onsite"
+    },
     "software-engineer-ii-google-87846727": {
       "summary": "Software engineer develops next-generation technologies for billions of users, working on critical projects with opportunities to switch teams and projects as the business evolves.",
       "key_skills": [
@@ -2929,6 +3028,25 @@
       "role_type": "ic",
       "red_flags": [],
       "work_mode_derived": "onsite"
+    },
+    "construction-electri-google-87846727": {
+      "summary": "Manages construction and electrical projects within Google Data Centers, coordinating with cross-functional teams to improve data center planning and execution.",
+      "key_skills": [
+        "construction",
+        "electrical",
+        "tpm",
+        "dcde",
+        "central_operations",
+        "google_data_centers"
+      ],
+      "core_skills": [
+        "project_management",
+        "cross_functional_stakeholder_management"
+      ],
+      "seniority_signal": "mid",
+      "role_type": "ic",
+      "red_flags": [],
+      "work_mode_derived": "unknown"
     },
     "senior-interaction-d-google-87846727": {
       "summary": "Senior Interaction Designer at Google YouTube focuses on defining privacy standards and building user trust through intuitive, age-appropriate experiences for billions of users across YouTube Kids, Community, and Creator Studio.",
@@ -2990,6 +3108,349 @@
         "ai",
         "evaluations",
         "health"
+      ],
+      "seniority_signal": "senior",
+      "role_type": "ic",
+      "red_flags": [],
+      "work_mode_derived": "remote"
+    },
+    "manager--grc-subject-vanta-51298764": {
+      "summary": "Manages GRC Product Subject Matter Experts team to develop and maintain security frameworks, compliance content, and testing processes for diverse customer needs.",
+      "key_skills": [
+        "gcr",
+        "product",
+        "frameworks",
+        "compliance",
+        "testing",
+        "quality",
+        "content",
+        "governance"
+      ],
+      "core_skills": [
+        "leadership",
+        "program_management",
+        "governance",
+        "compliance"
+      ],
+      "seniority_signal": "manager",
+      "role_type": "manager",
+      "red_flags": [],
+      "work_mode_derived": "unknown"
+    },
+    "software-engineer-ii-google-51298764": {
+      "summary": "Software engineer working on performance, large-scale systems, data analysis, and debugging for Google's infrastructure.",
+      "key_skills": [
+        "c++",
+        "python",
+        "performance",
+        "large_scale_systems",
+        "data_analysis",
+        "visualization",
+        "debugging",
+        "data_structures"
+      ],
+      "core_skills": [
+        "performance",
+        "large_scale_system:systems",
+        "data_analysis",
+        "debugging"
+      ],
+      "seniority_signal": "mid",
+      "role_type": "ic",
+      "red_flags": [],
+      "work_mode_derived": "hybrid"
+    },
+    "senior-interaction-d-google-51298764": {
+      "summary": "Senior Interaction Designer creates intuitive user experiences for billions of people through user flows, wireframes, and prototyping, collaborating with engineering and product teams.",
+      "key_skills": [
+        "interaction design",
+        "ux design",
+        "user flows",
+        "wireframes",
+        "prototyping",
+        "visual design"
+      ],
+      "core_skills": [
+        "user-centered design",
+        "cross-functional collaboration"
+      ],
+      "seniority_signal": "senior",
+      "role_type": "ic",
+      "red_flags": [],
+      "work_mode_derived": "hybrid"
+    },
+    "data-center-controls-google-37592914": {
+      "summary": "Designs and maintains data center infrastructure using BMS/EPMS architectures and automation systems.",
+      "key_skills": [
+        "data center",
+        "controls",
+        "engineering",
+        "networking",
+        "bms",
+        "epms",
+        "ddc",
+        "plc",
+        "vm",
+        "scada"
+      ],
+      "core_skills": [
+        "controls engineering",
+        "systems integration"
+      ],
+      "seniority_signal": "mid",
+      "role_type": "ic",
+      "red_flags": [],
+      "work_mode_derived": "hybrid"
+    },
+    "senior-staff-mechani-google-37592914": {
+      "summary": "Designs and optimizes power generation and gas transmission infrastructure with expertise in turbines and pipelines.",
+      "key_skills": [
+        "mechanical engineering",
+        "power generation",
+        "gas transmission",
+        "infrastructure"
+      ],
+      "core_skills": [
+        "deep technical design",
+        "aeroderivative gas turbines",
+        "multi-stage steam turbines",
+        "heat recovery steam generators"
+      ],
+      "seniority_signal": "senior",
+      "role_type": "ic",
+      "red_flags": [],
+      "work_mode_derived": "hybrid"
+    },
+    "data-center-engineer-google-37592914": {
+      "summary": "Owns the design, operation, and commissioning of mission-critical electrical infrastructure for Google's data centers.",
+      "key_skills": [
+        "data center",
+        "electrical engineering",
+        "infrastructure"
+      ],
+      "core_skills": [
+        "electrical distribution systems",
+        "power systems"
+      ],
+      "seniority_signal": "senior",
+      "role_type": "ic",
+      "red_flags": [],
+      "work_mode_derived": "hybrid"
+    },
+    "staff-security-engin-google-37592914": {
+      "summary": "Security Engineer helps protect network boundaries, keep computer systems and network devices hardened against attacks, and provide security services to protect highly sensitive data like passwords and customer information.",
+      "key_skills": [
+        "security engineering",
+        "threat modeling",
+        "pen-testing",
+        "network security",
+        "security protocols",
+        "software-defined networking",
+        "internet engineering task force",
+        "firewalls"
+      ],
+      "core_skills": [
+        "security assessments",
+        "security design reviews",
+        "threat modeling",
+        "pen-testing"
+      ],
+      "seniority_signal": "staff",
+      "role_type": "ic",
+      "red_flags": [],
+      "work_mode_derived": "remote"
+    },
+    "partner-engineer-iii-google-37592914": {
+      "summary": "Owns outcomes and decision making, solving ambiguous problems and influencing stakeholders with deep expertise in domain.",
+      "key_skills": [
+        "cloud",
+        "system",
+        "integrator",
+        "google",
+        "cloud"
+      ],
+      "core_skills": [
+        "cloud",
+        "integrator",
+        "system"
+      ],
+      "seniority_signal": "senior",
+      "role_type": "ic",
+      "red_flags": [],
+      "work_mode_derived": "remote"
+    },
+    "strategy-and-operati-google-37592914": {
+      "summary": "Drives strategic partnerships and operational execution for YouTube Music and Premium, managing key relationships and business initiatives to grow and distribute YouTube's products globally.",
+      "key_skills": [
+        "strategy",
+        "operations",
+        "management",
+        "youtube",
+        "music",
+        "premium"
+      ],
+      "core_skills": [
+        "strategic_planning",
+        "stakeholder_management",
+        "project_management",
+        "cross_functional_collaboration"
+      ],
+      "seniority_signal": "mid",
+      "role_type": "manager",
+      "red_flags": [],
+      "work_mode_derived": "hybrid"
+    },
+    "financial-analyst--g-google-37592914": {
+      "summary": "Financial Analysts ensure that Google makes sound financial decisions by modeling business scenarios, tracking performance metrics, and providing strategic insights to leaders.",
+      "key_skills": [
+        "financial analysis",
+        "revenue",
+        "ads",
+        "search",
+        "strategy",
+        "operations"
+      ],
+      "core_skills": [
+        "sql",
+        "data analysis"
+      ],
+      "seniority_signal": "mid",
+      "role_type": "ic",
+      "red_flags": [],
+      "work_mode_derived": "remote"
+    },
+    "senior-security-engi-google-37592914": {
+      "summary": "Security Engineer helps protect network boundaries, keep computer systems and network devices hardened against attacks, and provide security services to protect sensitive data like passwords and customer information.",
+      "key_skills": [
+        "security engineering",
+        "threat modeling",
+        "pen-testing",
+        "network security",
+        "security protocols",
+        "software-defined networking",
+        "internet engineering task force",
+        "firewalls"
+      ],
+      "core_skills": [
+        "security engineering",
+        "threat modeling",
+        "pen-testing",
+        "network security"
+      ],
+      "seniority_signal": "senior",
+      "role_type": "ic",
+      "red_flags": [],
+      "work_mode_derived": "remote"
+    },
+    "senior-cpu-performan-google-37592914": {
+      "summary": "Senior CPU Performance Architect designs and optimizes custom silicon solutions for Google's direct-to-consumer products by leveraging deep expertise in CPU architecture and performance modeling.",
+      "key_skills": [
+        "cpu",
+        "performance",
+        "architect",
+        "micro-architecture",
+        "micro-processor",
+        "performance modeling",
+        "analysis",
+        "correlation"
+      ],
+      "core_skills": [
+        "micro-architecture",
+        "performance modeling",
+        "analysis",
+        "correlation"
+      ],
+      "seniority_signal": "senior",
+      "role_type": "ic",
+      "red_flags": [],
+      "work_mode_derived": "remote"
+    },
+    "director--customer-e-google-37592914": {
+      "summary": "Directs customer engineering teams to develop go-to-market strategies for cloud infrastructure solutions in startups and enterprise environments.",
+      "key_skills": [
+        "cloud",
+        "customer engineering",
+        "go-to-market",
+        "ai",
+        "infrastructure",
+        "distributed systems",
+        "security",
+        "networking"
+      ],
+      "core_skills": [
+        "cloud architecture",
+        "customer engagement",
+        "go-to-market strategy",
+        "technical leadership"
+      ],
+      "seniority_signal": "senior",
+      "role_type": "ic",
+      "red_flags": [],
+      "work_mode_derived": "hybrid"
+    },
+    "head-of-solutions-en-vanta-24009235": {
+      "summary": "Owns and scales Vanta's regional Solutions Engineering organization across North America, driving technical win rates, accelerating deals, and shaping the company's go-to-market strategy.",
+      "key_skills": [
+        "solutions engineering",
+        "technical consulting",
+        "sales engineering",
+        "pre-sales",
+        "customer success",
+        "governance",
+        "compliance",
+        "security"
+      ],
+      "core_skills": [
+        "leadership",
+        "strategic planning",
+        "cross-functional collaboration",
+        "operational excellence"
+      ],
+      "seniority_signal": "senior",
+      "role_type": "executive",
+      "red_flags": [],
+      "work_mode_derived": "remote"
+    },
+    "software-engineer--m-google-24009235": {
+      "summary": "Builds native Android experiences for Google Image Search Results Pages and Image Viewer within the Android Google App, leading technical projects end-to-end from design to launch while optimizing performance for critical user journeys.",
+      "key_skills": [
+        "android",
+        "kotlin",
+        "jetpack compose",
+        "mobile",
+        "performance optimization",
+        "image management",
+        "data structures",
+        "algorithms"
+      ],
+      "core_skills": [
+        "android development",
+        "kotlin programming",
+        "performance optimization",
+        "mobile ui"
+      ],
+      "seniority_signal": "mid",
+      "role_type": "ic",
+      "red_flags": [],
+      "work_mode_derived": "onsite"
+    },
+    "global-sellout-busin-google-24009235": {
+      "summary": "Owes outcomes and decision making, solving ambiguous problems and influencing stakeholders; deep expertise in domain",
+      "key_skills": [
+        "business",
+        "sales",
+        "strategy",
+        "data",
+        "analytics",
+        "consulting",
+        "retail",
+        "omnichannel"
+      ],
+      "core_skills": [
+        "sales",
+        "strategy",
+        "data",
+        "analytics"
       ],
       "seniority_signal": "senior",
       "role_type": "ic",
