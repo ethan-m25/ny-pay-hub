@@ -1,8 +1,8 @@
 {
   "meta": {
-    "built_at": "2026-05-23T08:17:27.791574+00:00",
-    "total_jobs": 1016,
-    "enriched": 164
+    "built_at": "2026-05-24T08:20:51.022260+00:00",
+    "total_jobs": 1017,
+    "enriched": 179
   },
   "jobs": {
     "compliance-officer-virtu-39717152": {
@@ -2190,6 +2190,23 @@
       "red_flags": [],
       "work_mode_derived": "remote"
     },
+    "software-dev-enginee-amazon-87846724": {
+      "summary": "Software Dev Engineer II designs, develops, implements, tests, and documents embedded or distributed software applications, tools, systems, and services while mentoring junior engineers.",
+      "key_skills": [
+        "c#",
+        "c++",
+        "java",
+        "perl",
+        "object oriented design"
+      ],
+      "core_skills": [
+        "designing and developing large-scale software applications"
+      ],
+      "seniority_signal": "mid",
+      "role_type": "ic",
+      "red_flags": [],
+      "work_mode_derived": "onsite"
+    },
     "sr-manager--operatio-amazon-87846724": {
       "summary": "Owns and delivers operational budget for functional areas including safety, productivity, financial planning, and labor planning while driving continuous improvement projects to optimize operations and meet business objectives.",
       "key_skills": [
@@ -2330,6 +2347,37 @@
       "red_flags": [],
       "work_mode_derived": "remote"
     },
+    "cpu-design-verificat-google-87846724": {
+      "summary": "Verifies designs using CPU design verification methodologies and tools.",
+      "key_skills": [
+        "cpu",
+        "verification",
+        "engineer"
+      ],
+      "core_skills": [
+        "uvm",
+        "systemverilog"
+      ],
+      "seniority_signal": "mid",
+      "role_type": "ic",
+      "red_flags": [],
+      "work_mode_derived": "hybrid"
+    },
+    "partner-engineer-ii--google-87846724": {
+      "summary": "Drives progress, solves problems, and mentors junior team members with deeper expertise in relevant areas",
+      "key_skills": [
+        "cloud",
+        "engineering",
+        "google"
+      ],
+      "core_skills": [
+        "cloud"
+      ],
+      "seniority_signal": "mid",
+      "role_type": "ic",
+      "red_flags": [],
+      "work_mode_derived": "hybrid"
+    },
     "security-engineer--a-google-87846724": {
       "summary": "Security Engineer works on security research and risk mitigation systems, helps scope security problems, and contributes to projects across product areas to transform how Google manages and eliminates internal access risk.",
       "key_skills": [
@@ -2408,6 +2456,45 @@
       "red_flags": [],
       "work_mode_derived": "hybrid"
     },
+    "head-of-sdlc-improve-google-87846724": {
+      "summary": "Owns end-to-end software development process improvements for Google Cloud Platform, coordinating cross-functional teams to accelerate development velocity while ensuring security and compliance.",
+      "key_skills": [
+        "program management",
+        "sdlc improvement",
+        "cloud platform"
+      ],
+      "core_skills": [
+        "project management",
+        "cross-functional leadership"
+      ],
+      "seniority_signal": "senior",
+      "role_type": "ic",
+      "red_flags": [],
+      "work_mode_derived": "hybrid"
+    },
+    "senior-account-strat-google-87846724": {
+      "summary": "Drives customer success and growth for mid-market businesses through strategic account management and digital advertising solutions.",
+      "key_skills": [
+        "sales",
+        "account_management",
+        "advertising",
+        "digital_marketing",
+        "client_success",
+        "strategic_planning",
+        "storytelling",
+        "client_engagement"
+      ],
+      "core_skills": [
+        "sales",
+        "client_management",
+        "advertising",
+        "digital_marketing"
+      ],
+      "seniority_signal": "mid",
+      "role_type": "ic",
+      "red_flags": [],
+      "work_mode_derived": "onsite"
+    },
     "social-marketing-man-google-87846725": {
       "summary": "Drives social marketing campaigns for Gen Z brands on YouTube, leveraging AI insights and data analysis to create engaging content and influencer partnerships.",
       "key_skills": [
@@ -2484,6 +2571,22 @@
       "red_flags": [],
       "work_mode_derived": "remote"
     },
+    "analytical-lead--gov-google-87846725": {
+      "summary": "Drives progress, solving problems, and mentoring junior team members with deeper expertise in media analytics and AI-powered solutions",
+      "key_skills": [
+        "analytical",
+        "government",
+        "advocacy"
+      ],
+      "core_skills": [
+        "client-facing",
+        "project-management"
+      ],
+      "seniority_signal": "mid",
+      "role_type": "ic",
+      "red_flags": [],
+      "work_mode_derived": "remote"
+    },
     "manager--knowledge-a-google-87846725": {
       "summary": "Owning outcomes and decision making, solving ambiguous problems and influencing stakeholders with deep expertise in domain.",
       "key_skills": [
@@ -2522,6 +2625,29 @@
       "red_flags": [],
       "work_mode_derived": "hybrid"
     },
+    "program-manager--glo-google-87846725": {
+      "summary": "Drives progress, solves problems, and mentors junior team members while applying deep expertise in program and project management within data center infrastructure.",
+      "key_skills": [
+        "program management",
+        "project management",
+        "data centers",
+        "technical teams",
+        "agile methodologies",
+        "pmp",
+        "construction management",
+        "industrial infrastructure"
+      ],
+      "core_skills": [
+        "program management",
+        "project management",
+        "data centers",
+        "technical teams"
+      ],
+      "seniority_signal": "mid",
+      "role_type": "ic",
+      "red_flags": [],
+      "work_mode_derived": "hybrid"
+    },
     "reporting-lead-techn-google-87846725": {
       "summary": "Reporting Lead Technical Program Manager develops and maintains dashboards and reports for compliance, risk management, and audit purposes while coordinating cross-functional teams to ensure security, risk, and resiliency are integrated into Google's critical infrastructure.",
       "key_skills": [
@@ -2544,6 +2670,26 @@
       "role_type": "ic",
       "red_flags": [],
       "work_mode_derived": "remote"
+    },
+    "system-software-and--google-87846725": {
+      "summary": "Drives progress, solves problems, and mentors junior team members with deep expertise in system software and performance optimization",
+      "key_skills": [
+        "system",
+        "software",
+        "performance",
+        "engineer",
+        "silicon"
+      ],
+      "core_skills": [
+        "linux",
+        "kernel",
+        "c",
+        "c++"
+      ],
+      "seniority_signal": "mid",
+      "role_type": "ic",
+      "red_flags": [],
+      "work_mode_derived": "hybrid"
     },
     "power-generation-and-google-87846725": {
       "summary": "Owning technical design and execution of power plant projects, optimizing grid-connected generation efficiency, and ensuring compliance with codes and standards for data center infrastructure.",
@@ -2590,6 +2736,26 @@
       "role_type": "executive",
       "red_flags": [],
       "work_mode_derived": "remote"
+    },
+    "software-engineer-ii-google-87846726": {
+      "summary": "Software engineer responsible for end-to-end delivery, performance, and user experience of AI developer tools like Gemini Code Assist and CLI.",
+      "key_skills": [
+        "cloud",
+        "ai",
+        "full_stack",
+        "software_engineering",
+        "developer_tools",
+        "gcp"
+      ],
+      "core_skills": [
+        "full_stack",
+        "cloud",
+        "ai"
+      ],
+      "seniority_signal": "senior",
+      "role_type": "ic",
+      "red_flags": [],
+      "work_mode_derived": "onsite"
     },
     "technical-program-ma-google-87846726": {
       "summary": "Manages technical account relationships and cloud consulting services for enterprise clients.",
@@ -2723,6 +2889,23 @@
       "role_type": "ic",
       "red_flags": [],
       "work_mode_derived": "remote"
+    },
+    "director--program-ma-google-87846726": {
+      "summary": "Directs the planning, execution, and delivery of Google's enterprise-wide HR system transformation program, partnering with engineering leadership to define and manage the HR Engineering strategic roadmap.",
+      "key_skills": [
+        "program management",
+        "hr systems",
+        "ai strategy",
+        "google cloud"
+      ],
+      "core_skills": [
+        "program roadmap",
+        "cross-functional leadership"
+      ],
+      "seniority_signal": "senior",
+      "role_type": "ic",
+      "red_flags": [],
+      "work_mode_derived": "onsite"
     },
     "marketing-manager--a-google-87846726": {
       "summary": "Drives marketing strategy for AI products by creating content, managing creative production, and collaborating with cross-functional teams to improve user engagement and product growth.",
@@ -3006,6 +3189,52 @@
       "red_flags": [],
       "work_mode_derived": "onsite"
     },
+    "business-data-scient-google-87846727": {
+      "summary": "Drives go-to-market functions for YouTube Business Organization using analytics and data science to solve product and business problems.",
+      "key_skills": [
+        "python",
+        "sql",
+        "statistical analysis",
+        "bayesian statistics",
+        "causal inference",
+        "data science",
+        "machine learning",
+        "large language models"
+      ],
+      "core_skills": [
+        "data analysis",
+        "statistical modeling",
+        "database querying",
+        "causal inference"
+      ],
+      "seniority_signal": "mid",
+      "role_type": "ic",
+      "red_flags": [],
+      "work_mode_derived": "hybrid"
+    },
+    "software-engineer--f-google-87846727": {
+      "summary": "Software engineer responsible for growing and maintaining the control plane networking infrastructure that powers Google's data centers globally, solving distributed systems challenges in scaling and availability.",
+      "key_skills": [
+        "fabric",
+        "networking",
+        "cpn",
+        "scaling",
+        "c",
+        "c++",
+        "distributed",
+        "systems"
+      ],
+      "core_skills": [
+        "c",
+        "c++",
+        "distributed",
+        "systems"
+      ],
+      "seniority_signal": "mid",
+      "role_type": "ic",
+      "red_flags": [],
+      "work_mode_derived": "hybrid"
+    },
     "software-engineer-ii-google-87846727": {
       "summary": "Software engineer develops next-generation technologies for billions of users, working on critical projects with opportunities to switch teams and projects as the business evolves.",
       "key_skills": [
@@ -3028,6 +3257,22 @@
       "role_type": "ic",
       "red_flags": [],
       "work_mode_derived": "onsite"
+    },
+    "product-marketing-ma-google-87846727": {
+      "summary": "Product Marketing Manager at YouTube Youth focuses on defining YouTube's positioning and strategy for kids and teens, working with cross-functional teams to shape the product experience and grow the user base.",
+      "key_skills": [
+        "product marketing",
+        "youth",
+        "youtube"
+      ],
+      "core_skills": [
+        "cross-functional collaboration",
+        "strategic planning"
+      ],
+      "seniority_signal": "mid",
+      "role_type": "ic",
+      "red_flags": [],
+      "work_mode_derived": "hybrid"
     },
     "construction-electri-google-87846727": {
       "summary": "Manages construction and electrical projects within Google Data Centers, coordinating with cross-functional teams to improve data center planning and execution.",
@@ -3178,6 +3423,29 @@
       "role_type": "ic",
       "red_flags": [],
       "work_mode_derived": "hybrid"
+    },
+    "senior-named-account-cloudflare-37592914": {
+      "summary": "Account Executive drives enterprise sales cycles and digital transformation for complex clients, leveraging deep IT architecture understanding to orchestrate platform solutions.",
+      "key_skills": [
+        "cloudflare",
+        "sales",
+        "enterprise",
+        "account",
+        "executive",
+        "digital",
+        "transformation",
+        "it"
+      ],
+      "core_skills": [
+        "sales",
+        "forecasting",
+        "pipeline",
+        "management"
+      ],
+      "seniority_signal": "senior",
+      "role_type": "executive",
+      "red_flags": [],
+      "work_mode_derived": "remote"
     },
     "data-center-controls-google-37592914": {
       "summary": "Designs and maintains data center infrastructure using BMS/EPMS architectures and automation systems.",
@@ -3387,6 +3655,29 @@
       "role_type": "ic",
       "red_flags": [],
       "work_mode_derived": "hybrid"
+    },
+    "channel-manager-vanta-24009235": {
+      "summary": "Manages channel partnerships to drive revenue growth and partner deployment for the downmarket segment through co-selling and relationship building with partners.",
+      "key_skills": [
+        "channel management",
+        "partner deployment",
+        "sales pipeline",
+        "co-selling",
+        "partner enablement",
+        "relationship building",
+        "pipeline rigor",
+        "partner acquisition"
+      ],
+      "core_skills": [
+        "channel partner experience",
+        "co-selling",
+        "cross-functional collaboration",
+        "proactive self-starter"
+      ],
+      "seniority_signal": "mid",
+      "role_type": "manager",
+      "red_flags": [],
+      "work_mode_derived": "remote"
     },
     "head-of-solutions-en-vanta-24009235": {
       "summary": "Owns and scales Vanta's regional Solutions Engineering organization across North America, driving technical win rates, accelerating deals, and shaping the company's go-to-market strategy.",
