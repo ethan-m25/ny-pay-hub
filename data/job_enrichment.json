@@ -1,8 +1,8 @@
 {
   "meta": {
-    "built_at": "2026-05-24T08:20:51.022260+00:00",
-    "total_jobs": 1017,
-    "enriched": 179
+    "built_at": "2026-05-25T08:24:12.282651+00:00",
+    "total_jobs": 1031,
+    "enriched": 192
   },
   "jobs": {
     "compliance-officer-virtu-39717152": {
@@ -925,6 +925,29 @@
         "event-driven architectures"
       ],
       "seniority_signal": "mid",
+      "role_type": "ic",
+      "red_flags": [],
+      "work_mode_derived": "remote"
+    },
+    "staff-analytics-engi-twilio-39717152": {
+      "summary": "Designs and maintains analytics data layers using AWS Glue, Presto, and LookML to ensure data consistency and quality for R&D metrics.",
+      "key_skills": [
+        "aws glue",
+        "presto",
+        "lookml",
+        "sql",
+        "data engineering",
+        "data analytics",
+        "data quality",
+        "data modeling"
+      ],
+      "core_skills": [
+        "sql",
+        "data engineering",
+        "data analytics",
+        "data quality"
+      ],
+      "seniority_signal": "senior",
       "role_type": "ic",
       "red_flags": [],
       "work_mode_derived": "remote"
@@ -2437,6 +2460,29 @@
       "red_flags": [],
       "work_mode_derived": "hybrid"
     },
+    "customer-engineer-iv-google-87846724": {
+      "summary": "Partners with technical sales teams to differentiate Google Cloud, serves as customer's primary technical partner and advisor, troubleshoots technical issues, engages in proofs of concepts and demos, architects cross-pillar cloud solutions, drives technical wins and delivery plans.",
+      "key_skills": [
+        "cloud engineering",
+        "technical solutions",
+        "customer engagement",
+        "cloud architecture",
+        "on-premise engineering",
+        "virtualization",
+        "containerization",
+        "systems design"
+      ],
+      "core_skills": [
+        "technical problem solving",
+        "stakeholder influence",
+        "cloud platform expertise",
+        "technical strategy"
+      ],
+      "seniority_signal": "senior",
+      "role_type": "ic",
+      "red_flags": [],
+      "work_mode_derived": "onsite"
+    },
     "marketing-manager--g-google-87846724": {
       "summary": "Drives marketing initiatives for Google Cloud's partner ecosystem to build partner mindshare, loyalty, and advocacy in the market.",
       "key_skills": [
@@ -2494,6 +2540,27 @@
       "role_type": "ic",
       "red_flags": [],
       "work_mode_derived": "onsite"
+    },
+    "distinguished-engine-google-87846724": {
+      "summary": "Distinguished Engineer for Cloud Risk and Compliance leads the architectural vision and technical strategy for Google Cloud's global risk and compliance posture, developing capabilities to manage readiness for complex risk domains like AI Compliance by Design and TPRM.",
+      "key_skills": [
+        "cloud",
+        "risk",
+        "compliance",
+        "engineering",
+        "ai",
+        "ml",
+        "data"
+      ],
+      "core_skills": [
+        "cloud",
+        "risk",
+        "compliance"
+      ],
+      "seniority_signal": "senior",
+      "role_type": "ic",
+      "red_flags": [],
+      "work_mode_derived": "remote"
     },
     "social-marketing-man-google-87846725": {
       "summary": "Drives social marketing campaigns for Gen Z brands on YouTube, leveraging AI insights and data analysis to create engaging content and influencer partnerships.",
@@ -2583,6 +2650,25 @@
         "project-management"
       ],
       "seniority_signal": "mid",
+      "role_type": "ic",
+      "red_flags": [],
+      "work_mode_derived": "remote"
+    },
+    "staff-security-engin-google-87846725": {
+      "summary": "Works with Cloud security teams to proactively identify and fix security flaws and vulnerabilities in Google Cloud infrastructure",
+      "key_skills": [
+        "cloud security",
+        "red teaming",
+        "vulnerability research",
+        "pen testing",
+        "security engineering",
+        "threat modeling"
+      ],
+      "core_skills": [
+        "cloud security",
+        "red teaming"
+      ],
+      "seniority_signal": "staff",
       "role_type": "ic",
       "red_flags": [],
       "work_mode_derived": "remote"
@@ -2737,6 +2823,23 @@
       "red_flags": [],
       "work_mode_derived": "remote"
     },
+    "xr-ux-engineering-ma-google-87846726": {
+      "summary": "Manages a team of UX Engineers to implement front-end solutions for XR devices and fosters a culture of technical excellence and creative problem-solving.",
+      "key_skills": [
+        "ux engineering",
+        "xr",
+        "ai",
+        "google cloud"
+      ],
+      "core_skills": [
+        "team leadership",
+        "technical excellence"
+      ],
+      "seniority_signal": "senior",
+      "role_type": "manager",
+      "red_flags": [],
+      "work_mode_derived": "hybrid"
+    },
     "software-engineer-ii-google-87846726": {
       "summary": "Software engineer responsible for end-to-end delivery, performance, and user experience of AI developer tools like Gemini Code Assist and CLI.",
       "key_skills": [
@@ -2794,6 +2897,29 @@
         "network automation"
       ],
       "seniority_signal": "entry",
+      "role_type": "ic",
+      "red_flags": [],
+      "work_mode_derived": "hybrid"
+    },
+    "decarbonization-port-google-87846726": {
+      "summary": "Manages growing portfolio of carbon market instruments and owns analytics related to market instruments.",
+      "key_skills": [
+        "data engineering",
+        "business intelligence",
+        "data analytics",
+        "sql",
+        "python",
+        "data visualization",
+        "energy markets",
+        "grid infrastructure"
+      ],
+      "core_skills": [
+        "project management",
+        "data analysis",
+        "problem solving",
+        "communication"
+      ],
+      "seniority_signal": "mid",
       "role_type": "ic",
       "red_flags": [],
       "work_mode_derived": "hybrid"
@@ -2963,6 +3089,29 @@
       "red_flags": [],
       "work_mode_derived": "hybrid"
     },
+    "platform-customer-en-google-87846726": {
+      "summary": "Facilitates making customer work more productive, mobile, and collaborative by listening and delivering technical solutions, while assisting sales Googlers with problem-solving key technical issues.",
+      "key_skills": [
+        "cloud engineering",
+        "customer engineering",
+        "technical support",
+        "cloud architecture",
+        "virtualization",
+        "containerization",
+        "systems design",
+        "debugging"
+      ],
+      "core_skills": [
+        "cloud engineering",
+        "customer engineering",
+        "technical support",
+        "cloud architecture"
+      ],
+      "seniority_signal": "mid",
+      "role_type": "ic",
+      "red_flags": [],
+      "work_mode_derived": "hybrid"
+    },
     "mechanical-engineer--google-87846726": {
       "summary": "Designs and commissions mission critical data center mechanical equipment and cooling systems",
       "key_skills": [
@@ -3045,6 +3194,29 @@
       "red_flags": [],
       "work_mode_derived": "hybrid"
     },
+    "brand-marketing-mana-google-87846726": {
+      "summary": "Drives end-to-end execution of small to large-scale creative campaigns and programs for Google Cloud brands.",
+      "key_skills": [
+        "brand marketing",
+        "creative campaigns",
+        "campaign management",
+        "ai tools",
+        "creative execution",
+        "experiential activations",
+        "360-degree marketing",
+        "user experience"
+      ],
+      "core_skills": [
+        "campaign management",
+        "creative execution",
+        "ai tools",
+        "experiential activations"
+      ],
+      "seniority_signal": "mid",
+      "role_type": "ic",
+      "red_flags": [],
+      "work_mode_derived": "hybrid"
+    },
     "staff-data-center-me-google-87846726": {
       "summary": "Designs and maintains mission-critical data center mechanical infrastructure systems with expertise in thermal and hydraulic modeling, pipe stress analysis, and construction safety.",
       "key_skills": [
@@ -3066,6 +3238,29 @@
       "role_type": "ic",
       "red_flags": [],
       "work_mode_derived": "remote"
+    },
+    "senior-staff-data-sc-google-87846726": {
+      "summary": "Senior Data Scientist who provides quantitative support, market understanding, and strategic perspective to Google's partners by using data to make better decisions and communicating insights to engineering and product teams.",
+      "key_skills": [
+        "data science",
+        "python",
+        "sql",
+        "r",
+        "machine learning",
+        "statistics",
+        "analytics",
+        "engineering"
+      ],
+      "core_skills": [
+        "data analysis",
+        "statistical modeling",
+        "product analytics",
+        "machine learning"
+      ],
+      "seniority_signal": "senior",
+      "role_type": "ic",
+      "red_flags": [],
+      "work_mode_derived": "hybrid"
     },
     "staff-software-devel-google-87846726": {
       "summary": "Works on AI/ML projects related to safety and security, building LLM-based safety and security auto-raters and critical classifiers for prompt injection attacks.",
@@ -3109,6 +3304,29 @@
       "role_type": "ic",
       "red_flags": [],
       "work_mode_derived": "hybrid"
+    },
+    "product-policy-lead--google-87846726": {
+      "summary": "Owning outcomes and decision making for AI policy issues while solving ambiguous problems and influencing stakeholders across Google's products.",
+      "key_skills": [
+        "generative ai",
+        "policy",
+        "trust and safety",
+        "ai safety",
+        "content moderation",
+        "ai policy",
+        "content issues",
+        "harmful content"
+      ],
+      "core_skills": [
+        "policy expertise",
+        "stakeholder influence",
+        "problem solving",
+        "critical thinking"
+      ],
+      "seniority_signal": "senior",
+      "role_type": "executive",
+      "red_flags": [],
+      "work_mode_derived": "remote"
     },
     "research-scientist-e-google-87846727": {
       "summary": "Research Scientist designs and implements production-grade security AI/ML systems using Python and ML frameworks to detect threats and vulnerabilities in autonomous systems.",
@@ -3489,6 +3707,25 @@
       "red_flags": [],
       "work_mode_derived": "hybrid"
     },
+    "global-product-lead--google-37592914": {
+      "summary": "Drives product strategy and execution for Display and YouTube with Google Customer Solutions' agency partners to enable SMB customer growth.",
+      "key_skills": [
+        "product",
+        "demand",
+        "generation",
+        "psa",
+        "google"
+      ],
+      "core_skills": [
+        "strategy",
+        "gtm",
+        "execution"
+      ],
+      "seniority_signal": "mid",
+      "role_type": "executive",
+      "red_flags": [],
+      "work_mode_derived": "remote"
+    },
     "data-center-engineer-google-37592914": {
       "summary": "Owns the design, operation, and commissioning of mission-critical electrical infrastructure for Google's data centers.",
       "key_skills": [
@@ -3702,6 +3939,29 @@
       "red_flags": [],
       "work_mode_derived": "remote"
     },
+    "data-center-electric-google-24009235": {
+      "summary": "Designs and maintains electrical infrastructure for mission-critical data centers, ensuring compliance with safety standards and optimizing power distribution systems.",
+      "key_skills": [
+        "data center",
+        "electrical engineering",
+        "power distribution",
+        "power engineering",
+        "switchgear",
+        "transformers",
+        "distribution networks",
+        "networking"
+      ],
+      "core_skills": [
+        "power distribution",
+        "switchgear",
+        "transformers",
+        "distribution networks"
+      ],
+      "seniority_signal": "mid",
+      "role_type": "ic",
+      "red_flags": [],
+      "work_mode_derived": "hybrid"
+    },
     "software-engineer--m-google-24009235": {
       "summary": "Builds native Android experiences for Google Image Search Results Pages and Image Viewer within the Android Google App, leading technical projects end-to-end from design to launch while optimizing performance for critical user journeys.",
       "key_skills": [
@@ -3747,6 +4007,22 @@
       "role_type": "ic",
       "red_flags": [],
       "work_mode_derived": "remote"
+    },
+    "senior-customer-solu-google-97263690": {
+      "summary": "Drives technical solutions and scaling for global customer segments while partnering with regional stakeholders and product teams.",
+      "key_skills": [
+        "customer solutions",
+        "engineering",
+        "google cloud"
+      ],
+      "core_skills": [
+        "problem solving",
+        "technical troubleshooting"
+      ],
+      "seniority_signal": "senior",
+      "role_type": "ic",
+      "red_flags": [],
+      "work_mode_derived": "onsite"
     }
   }
 }
