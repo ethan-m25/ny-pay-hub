@@ -1,8 +1,8 @@
 {
   "meta": {
-    "built_at": "2026-05-25T08:24:12.282651+00:00",
-    "total_jobs": 1031,
-    "enriched": 192
+    "built_at": "2026-05-26T08:27:46.914846+00:00",
+    "total_jobs": 1057,
+    "enriched": 205
   },
   "jobs": {
     "compliance-officer-virtu-39717152": {
@@ -710,6 +710,26 @@
       "work_mode_derived": "remote"
     },
     "senior-product-manag-squarespace-39717152": {
+      "summary": "Builds and maintains websites using Squarespace's AI tools and templates for clients.",
+      "key_skills": [
+        "ai",
+        "website",
+        "design",
+        "templates",
+        "ecommerce",
+        "content"
+      ],
+      "core_skills": [
+        "ai",
+        "website",
+        "design"
+      ],
+      "seniority_signal": "entry",
+      "role_type": "ic",
+      "red_flags": [],
+      "work_mode_derived": "remote"
+    },
+    "support-platform-man-squarespace-39717152": {
       "summary": "Builds and maintains websites using Squarespace's AI tools and templates for clients.",
       "key_skills": [
         "ai",
@@ -2502,6 +2522,27 @@
       "red_flags": [],
       "work_mode_derived": "hybrid"
     },
+    "global-product-lead--google-87846724": {
+      "summary": "Drives product strategy and monetization solutions for YouTube's advertising ecosystem while collaborating with cross-functional teams to optimize ad performance and market positioning.",
+      "key_skills": [
+        "product",
+        "monetization",
+        "pricing",
+        "youtube",
+        "advertising",
+        "digital"
+      ],
+      "core_skills": [
+        "product_management",
+        "strategic_planning",
+        "cross_functional_stakeholder_management",
+        "executive_communication"
+      ],
+      "seniority_signal": "mid",
+      "role_type": "executive",
+      "red_flags": [],
+      "work_mode_derived": "hybrid"
+    },
     "head-of-sdlc-improve-google-87846724": {
       "summary": "Owns end-to-end software development process improvements for Google Cloud Platform, coordinating cross-functional teams to accelerate development velocity while ensuring security and compliance.",
       "key_skills": [
@@ -2653,6 +2694,49 @@
       "role_type": "ic",
       "red_flags": [],
       "work_mode_derived": "remote"
+    },
+    "strategy-and-operati-google-87846725": {
+      "summary": "Drives business strategy and operations through data analysis and insights, solving complex problems in fast-paced environments.",
+      "key_skills": [
+        "data analysis",
+        "sql",
+        "statistical problem solving",
+        "data science",
+        "data-driven insights",
+        "business acumen",
+        "problem solving",
+        "statistical modeling"
+      ],
+      "core_skills": [
+        "data analysis",
+        "sql",
+        "statistical problem solving",
+        "data science"
+      ],
+      "seniority_signal": "mid",
+      "role_type": "ic",
+      "red_flags": [],
+      "work_mode_derived": "hybrid"
+    },
+    "software-engineer-ma-google-87846725": {
+      "summary": "Owning outcomes and decision making, solving ambiguous problems, and influencing stakeholders while managing technical teams and large-scale projects across multiple locations.",
+      "key_skills": [
+        "networking",
+        "infrastructure",
+        "software",
+        "engineering",
+        "manager"
+      ],
+      "core_skills": [
+        "technical leadership",
+        "distributed systems",
+        "networking",
+        "infrastructure"
+      ],
+      "seniority_signal": "senior",
+      "role_type": "manager",
+      "red_flags": [],
+      "work_mode_derived": "hybrid"
     },
     "staff-security-engin-google-87846725": {
       "summary": "Works with Cloud security teams to proactively identify and fix security flaws and vulnerabilities in Google Cloud infrastructure",
@@ -3939,6 +4023,29 @@
       "red_flags": [],
       "work_mode_derived": "remote"
     },
+    "revenue-operations-a-vanta-24009235": {
+      "summary": "Owns day-to-day operational excellence of Vanta's NAMER SDR organization and makes recommendations to improve Vanta’s GTM motion",
+      "key_skills": [
+        "revenue operations",
+        "sales operations",
+        "sales development",
+        "sdr",
+        "data analysis",
+        "process optimization",
+        "sales metrics",
+        "gtm"
+      ],
+      "core_skills": [
+        "data analysis",
+        "process optimization",
+        "sales metrics",
+        "sdr"
+      ],
+      "seniority_signal": "mid",
+      "role_type": "ic",
+      "red_flags": [],
+      "work_mode_derived": "remote"
+    },
     "data-center-electric-google-24009235": {
       "summary": "Designs and maintains electrical infrastructure for mission-critical data centers, ensuring compliance with safety standards and optimizing power distribution systems.",
       "key_skills": [
@@ -3956,6 +4063,29 @@
         "switchgear",
         "transformers",
         "distribution networks"
+      ],
+      "seniority_signal": "mid",
+      "role_type": "ic",
+      "red_flags": [],
+      "work_mode_derived": "hybrid"
+    },
+    "program-manager--cus-google-24009235": {
+      "summary": "Program Manager in Google Cloud’s Customer Office of the CEO supports the COO’s customer engagement function and provides operational backbone for executive field visits, managing complex projects and stakeholder coordination.",
+      "key_skills": [
+        "program management",
+        "customer engagement",
+        "executive support",
+        "project management",
+        "process improvement",
+        "systems thinking",
+        "stakeholder management",
+        "multi-stakeholder projects"
+      ],
+      "core_skills": [
+        "program management",
+        "executive support",
+        "stakeholder management",
+        "process improvement"
       ],
       "seniority_signal": "mid",
       "role_type": "ic",
@@ -4023,6 +4153,154 @@
       "role_type": "ic",
       "red_flags": [],
       "work_mode_derived": "onsite"
+    },
+    "forward-deployed-eng-google-83746160": {
+      "summary": "Develops and deploys full-stack applications using Python and Terraform to automate infrastructure setup for customer projects and enterprise IT systems.",
+      "key_skills": [
+        "python",
+        "terraform",
+        "full-stack",
+        "enterprise_it_infrastructure",
+        "customer_projects"
+      ],
+      "core_skills": [
+        "python",
+        "terraform"
+      ],
+      "seniority_signal": "entry",
+      "role_type": "ic",
+      "red_flags": [],
+      "work_mode_derived": "remote"
+    },
+    "senior-technical-sol-google-83746160": {
+      "summary": "Senior Technical Solutions Consultant designs and deploys Agentic AI solutions for complex enterprise environments using LLMs and conversational AI frameworks.",
+      "key_skills": [
+        "technical",
+        "solutions",
+        "consultant",
+        "agent",
+        "assist",
+        "applied",
+        "ai"
+      ],
+      "core_skills": [
+        "prompt",
+        "engineering",
+        "llm",
+        "conversational"
+      ],
+      "seniority_signal": "senior",
+      "role_type": "ic",
+      "red_flags": [],
+      "work_mode_derived": "remote"
+    },
+    "global-product-solut-google-83746160": {
+      "summary": "Drives cross-team strategies to connect Google products with business solutions for customers",
+      "key_skills": [
+        "product",
+        "solutions",
+        "search"
+      ],
+      "core_skills": [
+        "strategic",
+        "cross-functional"
+      ],
+      "seniority_signal": "mid",
+      "role_type": "executive",
+      "red_flags": [],
+      "work_mode_derived": "hybrid"
+    },
+    "regulatory-counsel---google-83746160": {
+      "summary": "Regulatory Counsel works on content, consumer protection, and AI regulations daily.",
+      "key_skills": [
+        "regulatory",
+        "counsel",
+        "content",
+        "consumer",
+        "protection",
+        "ai"
+      ],
+      "core_skills": [
+        "legal",
+        "compliance"
+      ],
+      "seniority_signal": "entry",
+      "role_type": "ic",
+      "red_flags": [],
+      "work_mode_derived": "remote"
+    },
+    "ux-designer--sysui---google-83746160": {
+      "summary": "Owning outcomes and decision making, solving ambiguous problems and influencing stakeholders; deep expertise in domain",
+      "key_skills": [
+        "ux",
+        "sysui",
+        "xr"
+      ],
+      "core_skills": [
+        "ux design",
+        "iterative design"
+      ],
+      "seniority_signal": "entry",
+      "role_type": "ic",
+      "red_flags": [],
+      "work_mode_derived": "remote"
+    },
+    "software-engineer-ii-google-83746160": {
+      "summary": "Software engineer who develops and maintains large-scale infrastructure, distributed systems, and networking solutions for Google Cloud Platforms.",
+      "key_skills": [
+        "c++",
+        "go",
+        "distributed systems",
+        "networking",
+        "compute technologies",
+        "storage",
+        "hardware architecture",
+        "data structures",
+        "algorithms",
+        "performance analysis",
+        "data visualization",
+        "debugging",
+        "accessible technologies",
+        "system health",
+        "diagnosis",
+        "resolution",
+        "software testing"
+      ],
+      "core_skills": [
+        "distributed systems",
+        "networking",
+        "system health",
+        "diagnosis",
+        "resolution",
+        "software testing"
+      ],
+      "seniority_signal": "mid",
+      "role_type": "ic",
+      "red_flags": [],
+      "work_mode_derived": "remote"
+    },
+    "technical-program-ma-google-83746160": {
+      "summary": "Manages technical program lifecycle for full production infrastructure products with focus on data center operations and technical infrastructure.",
+      "key_skills": [
+        "technical program management",
+        "data center operations",
+        "technical infrastructure",
+        "vendor resource management",
+        "production lifecycle",
+        "construction facilities management",
+        "technical documentation",
+        "ai tools"
+      ],
+      "core_skills": [
+        "technical program management",
+        "data center operations",
+        "technical infrastructure",
+        "vendor resource management"
+      ],
+      "seniority_signal": "mid",
+      "role_type": "ic",
+      "red_flags": [],
+      "work_mode_derived": "hybrid"
     }
   }
 }
