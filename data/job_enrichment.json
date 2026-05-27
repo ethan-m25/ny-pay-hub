@@ -1,8 +1,8 @@
 {
   "meta": {
-    "built_at": "2026-05-26T08:27:46.914846+00:00",
-    "total_jobs": 1057,
-    "enriched": 205
+    "built_at": "2026-05-27T08:36:56.292810+00:00",
+    "total_jobs": 1076,
+    "enriched": 217
   },
   "jobs": {
     "compliance-officer-virtu-39717152": {
@@ -710,6 +710,26 @@
       "work_mode_derived": "remote"
     },
     "senior-product-manag-squarespace-39717152": {
+      "summary": "Builds and maintains websites using Squarespace's AI tools and templates for clients.",
+      "key_skills": [
+        "ai",
+        "website",
+        "design",
+        "templates",
+        "ecommerce",
+        "content"
+      ],
+      "core_skills": [
+        "ai",
+        "website",
+        "design"
+      ],
+      "seniority_signal": "entry",
+      "role_type": "ic",
+      "red_flags": [],
+      "work_mode_derived": "remote"
+    },
+    "staff-engineer--fron-squarespace-39717152": {
       "summary": "Builds and maintains websites using Squarespace's AI tools and templates for clients.",
       "key_skills": [
         "ai",
@@ -2457,6 +2477,29 @@
       "red_flags": [],
       "work_mode_derived": "hybrid"
     },
+    "senior-staff-softwar-google-87846724": {
+      "summary": "Owns technical outcomes and decision-making for front-end software development projects, solving complex problems and influencing stakeholders while delivering scalable solutions.",
+      "key_skills": [
+        "javascript",
+        "typescript",
+        "java",
+        "kotlin",
+        "frontend",
+        "full-stack",
+        "api",
+        "generative_ai"
+      ],
+      "core_skills": [
+        "technical_leadership",
+        "project_management",
+        "full_stack_development",
+        "api_design"
+      ],
+      "seniority_signal": "senior",
+      "role_type": "ic",
+      "red_flags": [],
+      "work_mode_derived": "hybrid"
+    },
     "partner-enablement-l-google-87846724": {
       "summary": "The Partner Enablement Lead educates agency partners on Global Product Priorities and gTech Media and Tech Services to improve customer activation and business growth.",
       "key_skills": [
@@ -2679,6 +2722,22 @@
       "red_flags": [],
       "work_mode_derived": "remote"
     },
+    "customer-engineering-google-87846725": {
+      "summary": "Owning outcomes and decision making, solving ambiguous problems and influencing stakeholders with deep expertise in domain.",
+      "key_skills": [
+        "customer engineering",
+        "looker",
+        "google cloud"
+      ],
+      "core_skills": [
+        "leadership",
+        "technical solutions"
+      ],
+      "seniority_signal": "senior",
+      "role_type": "manager",
+      "red_flags": [],
+      "work_mode_derived": "remote"
+    },
     "analytical-lead--gov-google-87846725": {
       "summary": "Drives progress, solving problems, and mentoring junior team members with deeper expertise in media analytics and AI-powered solutions",
       "key_skills": [
@@ -2883,6 +2942,22 @@
       "role_type": "ic",
       "red_flags": [],
       "work_mode_derived": "onsite"
+    },
+    "product-counsel--dat-google-87846725": {
+      "summary": "Product counsel advises data engineering, product, and research teams on legal matters relevant to developing data strategy for AI models.",
+      "key_skills": [
+        "product_counsel",
+        "data_strategy",
+        "deepmind"
+      ],
+      "core_skills": [
+        "legal_advice",
+        "regulatory_compliance"
+      ],
+      "seniority_signal": "senior",
+      "role_type": "ic",
+      "red_flags": [],
+      "work_mode_derived": "unknown"
     },
     "strategic-negotiator-google-87846726": {
       "summary": "Strategic Negotiator IV at Google Cloud negotiates infrastructure solutions for global scale, including underwater cables and data center space, by leveraging deep market knowledge and tech industry expertise.",
@@ -3233,6 +3308,29 @@
       ],
       "seniority_signal": "senior",
       "role_type": "manager",
+      "red_flags": [],
+      "work_mode_derived": "hybrid"
+    },
+    "senior-interaction-d-google-87846726": {
+      "summary": "Senior Interaction Designer creates intuitive user experiences for AI personalized products by collaborating with engineering and product teams to transform complex tasks into user-friendly interfaces.",
+      "key_skills": [
+        "interaction design",
+        "ai personalized experiences",
+        "user experience",
+        "ux design",
+        "generative ai",
+        "llms",
+        "prompt engineering",
+        "user-centered design"
+      ],
+      "core_skills": [
+        "interaction design",
+        "ai personalized experiences",
+        "user experience",
+        "ux design"
+      ],
+      "seniority_signal": "senior",
+      "role_type": "ic",
       "red_flags": [],
       "work_mode_derived": "hybrid"
     },
@@ -4296,6 +4394,128 @@
         "data center operations",
         "technical infrastructure",
         "vendor resource management"
+      ],
+      "seniority_signal": "mid",
+      "role_type": "ic",
+      "red_flags": [],
+      "work_mode_derived": "hybrid"
+    },
+    "senior-director--cor-oscar-16317621": {
+      "summary": "Develops and maintains JavaScript-based health insurance applications",
+      "key_skills": [
+        "javascript",
+        "health_insurance"
+      ],
+      "core_skills": [
+        "javascript"
+      ],
+      "seniority_signal": "entry",
+      "role_type": "ic",
+      "red_flags": [],
+      "work_mode_derived": "unknown"
+    },
+    "senior-director--mar-oscar-16317621": {
+      "summary": "Develops and maintains JavaScript-based health insurance applications",
+      "key_skills": [
+        "javascript",
+        "health_insurance"
+      ],
+      "core_skills": [
+        "javascript"
+      ],
+      "seniority_signal": "entry",
+      "role_type": "ic",
+      "red_flags": [],
+      "work_mode_derived": "unknown"
+    },
+    "associate-director---oscar-70814268": {
+      "summary": "Develops and maintains JavaScript-based health insurance applications",
+      "key_skills": [
+        "javascript",
+        "health_insurance"
+      ],
+      "core_skills": [
+        "javascript"
+      ],
+      "seniority_signal": "entry",
+      "role_type": "ic",
+      "red_flags": [],
+      "work_mode_derived": "unknown"
+    },
+    "principal-engineer---google-70814268": {
+      "summary": "Principal Engineer responsible for setting technical strategy for GCP Data Analytics' stream data processing portfolio including PubSub and Google Managed Kafka.",
+      "key_skills": [
+        "distributed systems",
+        "managed services",
+        "large-scale data processing",
+        "customer empathy",
+        "technical innovation",
+        "cross-functional engineering",
+        "ideation",
+        "cross-platform shared code"
+      ],
+      "core_skills": [
+        "distributed systems",
+        "managed services",
+        "large-scale data processing",
+        "customer empathy"
+      ],
+      "seniority_signal": "principal",
+      "role_type": "ic",
+      "red_flags": [],
+      "work_mode_derived": "remote"
+    },
+    "strategic-partner-de-google-70814268": {
+      "summary": "This role bridges high-end fashion and cutting-edge technology to design strategies, partnerships, and channel activities that position Android XR AI and XR Glasses across global distribution channels.",
+      "key_skills": [
+        "strategic partner development",
+        "glasses tech",
+        "fashion",
+        "channel programs",
+        "android xr",
+        "ai"
+      ],
+      "core_skills": [
+        "business development",
+        "partnerships",
+        "cross-functional leadership",
+        "stakeholder influence"
+      ],
+      "seniority_signal": "lead",
+      "role_type": "executive",
+      "red_flags": [],
+      "work_mode_derived": "remote"
+    },
+    "field-sales-represen-google-70814268": {
+      "summary": "Field Sales Representative III focuses on enterprise cloud growth by managing sales cycles, negotiating complex agreements, and expanding customer accounts through consultative selling and strategic planning.",
+      "key_skills": [
+        "cloud",
+        "sales",
+        "enterprise",
+        "growth",
+        "field"
+      ],
+      "core_skills": [
+        "sales",
+        "pipeline",
+        "forecasting",
+        "negotiation"
+      ],
+      "seniority_signal": "senior",
+      "role_type": "ic",
+      "red_flags": [],
+      "work_mode_derived": "hybrid"
+    },
+    "ux-designer--system--google-70814268": {
+      "summary": "Drives progress, solves problems, and mentors junior team members while applying user-centered design methods to craft industry-leading user experiences for XR devices.",
+      "key_skills": [
+        "ux design",
+        "system ui",
+        "xr"
+      ],
+      "core_skills": [
+        "iterative design",
+        "user-centered design"
       ],
       "seniority_signal": "mid",
       "role_type": "ic",
