@@ -1,8 +1,8 @@
 {
   "meta": {
-    "built_at": "2026-05-27T08:36:56.292810+00:00",
-    "total_jobs": 1076,
-    "enriched": 217
+    "built_at": "2026-05-28T08:58:16.744267+00:00",
+    "total_jobs": 2092,
+    "enriched": 226
   },
   "jobs": {
     "compliance-officer-virtu-39717152": {
@@ -4521,6 +4521,197 @@
       "role_type": "ic",
       "red_flags": [],
       "work_mode_derived": "hybrid"
+    },
+    "financial-analyst--s-major-us-financ-57829519": {
+      "summary": "Quantitative analysts and financial engineers work on complex financial models and risk assessments for investment strategies and trading.",
+      "key_skills": [
+        "quantitative analysis",
+        "financial engineering",
+        "risk management",
+        "actuarial science",
+        "data science",
+        "compliance",
+        "investment banking",
+        "financial technology"
+      ],
+      "core_skills": [
+        "quantitative analysis",
+        "financial engineering",
+        "risk management",
+        "data science"
+      ],
+      "seniority_signal": "mid",
+      "role_type": "ic",
+      "red_flags": [],
+      "work_mode_derived": "hybrid"
+    },
+    "sr--software-enginee-canoe-intellige-57829519": {
+      "summary": "Designs and develops high quality code, participates in cross-functional project leadership, and ships mission-critical products and features for Canoe's web applications.",
+      "key_skills": [
+        "full stack",
+        "software engineering",
+        "ai"
+      ],
+      "core_skills": [
+        "ai",
+        "software engineering"
+      ],
+      "seniority_signal": "senior",
+      "role_type": "ic",
+      "red_flags": [],
+      "work_mode_derived": "hybrid"
+    },
+    "medical-director---p-tia-57829519": {
+      "summary": "Medical Director leads outpatient clinics with 95% clinical care focus, mentoring teams and ensuring high-quality women's health services while balancing operational efficiency.",
+      "key_skills": [
+        "physician",
+        "women's health",
+        "primary care",
+        "mental health",
+        "gynecology",
+        "obgyn",
+        "outpatient",
+        "sports"
+      ],
+      "core_skills": [
+        "clinical leadership",
+        "team mentorship",
+        "patient-centered care",
+        "data-driven decision making"
+      ],
+      "seniority_signal": "senior",
+      "role_type": "ic",
+      "red_flags": [],
+      "work_mode_derived": "onsite"
+    },
+    "senior-learning-spec-oscar-57829519": {
+      "summary": "Develops and maintains JavaScript-based health insurance applications",
+      "key_skills": [
+        "javascript",
+        "health_insurance"
+      ],
+      "core_skills": [
+        "javascript"
+      ],
+      "seniority_signal": "entry",
+      "role_type": "ic",
+      "red_flags": [],
+      "work_mode_derived": "unknown"
+    },
+    "principal-software-e-gusto-57829519": {
+      "summary": "Serves as a Technical Lead across multiple teams in the Money Group, defining long-term technical vision for financial systems and ensuring high-quality delivery aligned with business goals.",
+      "key_skills": [
+        "ai-native",
+        "architectural-design",
+        "technical-lead",
+        "service-architecture",
+        "monolith-migration",
+        "financial-infrastructure",
+        "unified-platform",
+        "ai-pipeline"
+      ],
+      "core_skills": [
+        "technical-lead",
+        "architectural-design",
+        "service-architecture",
+        "monolith-migration"
+      ],
+      "seniority_signal": "principal",
+      "role_type": "ic",
+      "red_flags": [],
+      "work_mode_derived": "unknown"
+    },
+    "analyst-i--full-stac-affirm-57829519": {
+      "summary": "Owns end-to-end analytics workflows, builds scalable data models, and improves developer and analytics lifecycle efficiency through data infrastructure and cross-functional collaboration.",
+      "key_skills": [
+        "sql",
+        "data",
+        "analytics",
+        "engineering",
+        "snowflake",
+        "dbt",
+        "git",
+        "sigma"
+      ],
+      "core_skills": [
+        "sql",
+        "data",
+        "analytics",
+        "engineering"
+      ],
+      "seniority_signal": "mid",
+      "role_type": "ic",
+      "red_flags": [],
+      "work_mode_derived": "remote"
+    },
+    "compliance-analyst-i-affirm-57829520": {
+      "summary": "Compliance Analyst II reviews consumer complaints, investigates operational issues, and ensures adherence to federal and state regulations through proactive risk mitigation and process improvements.",
+      "key_skills": [
+        "compliance",
+        "regulatory",
+        "risk",
+        "consumer",
+        "credit",
+        "fraud",
+        "financial",
+        "fintech"
+      ],
+      "core_skills": [
+        "compliance",
+        "regulatory",
+        "risk",
+        "consumer"
+      ],
+      "seniority_signal": "mid",
+      "role_type": "ic",
+      "red_flags": [],
+      "work_mode_derived": "remote"
+    },
+    "senior-ciam-software-affirm-57829520": {
+      "summary": "Builds and operates backend services for customer registration, authentication, authorization, and account lifecycle flows across B2C and B2B platforms.",
+      "key_skills": [
+        "ciam",
+        "oauth",
+        "oidc",
+        "saml",
+        "scim",
+        "python",
+        "kotlin",
+        "infrastructure-as-code"
+      ],
+      "core_skills": [
+        "ciam",
+        "oauth",
+        "oidc",
+        "saml"
+      ],
+      "seniority_signal": "mid",
+      "role_type": "ic",
+      "red_flags": [],
+      "work_mode_derived": "remote"
+    },
+    "senior-machine-learn-affirm-57829520": {
+      "summary": "Builds and improves machine learning systems for real-time fraud transaction decisions while balancing fraud loss, customer experience, and conversion.",
+      "key_skills": [
+        "machine learning",
+        "fraud detection",
+        "real-time processing",
+        "data pipelines",
+        "feature engineering",
+        "model productionization",
+        "model monitoring",
+        "model retraining"
+      ],
+      "core_skills": [
+        "python",
+        "pytorch",
+        "spark",
+        "mlflow"
+      ],
+      "seniority_signal": "senior",
+      "role_type": "ic",
+      "red_flags": [],
+      "work_mode_derived": "remote"
     }
   }
 }
