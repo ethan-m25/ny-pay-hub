@@ -23,6 +23,7 @@ from datetime import date, timedelta
 sys.path.insert(0, os.path.dirname(__file__))
 from _common import (
     make_logger, acquire_lock, load_existing_keys,
+    load_existing_urls,
     write_job, TODAY, OUTPUT_FILE, NY_TERMS,
 )
 
@@ -35,91 +36,10 @@ LOOKBACK_DATE = (date.today() - timedelta(days=60)).isoformat() + "T00:00:00.000
 log = make_logger(LOG_FILE)
 fetcher = Fetcher()
 
-SEED_SLUGS = [
-    # ── Finance / Wall Street ─────────────────────────────────────────────────
-    ("jpmorgan", None),            # JP Morgan Chase, NYC HQ
-    ("goldmansachs", None),        # Goldman Sachs, NYC HQ
-    ("morganstanley", None),       # Morgan Stanley, NYC HQ
-    ("blackrock", None),           # BlackRock, NYC HQ
-    ("bloomberg", None),           # Bloomberg LP, NYC HQ
-    ("citadel", None),             # Citadel, Chicago/NYC
-    ("twosigma", None),            # Two Sigma, NYC
-    ("deshaw", None),              # D.E. Shaw, NYC
-    ("pointtwo2", None),           # Point72, Stamford/NYC
-    ("virtu", None),               # Virtu Financial, NYC
-    ("fidelityinvestments", None), # Fidelity Investments
-    ("vanguard", None),            # Vanguard, Valley Forge/remote
-    ("pimco", None),               # PIMCO, Newport Beach/NYC
-    ("blackstone", None),          # Blackstone, NYC
-    ("apolloglobal", None),        # Apollo Global, NYC
-    # ── Fintech / Payments ────────────────────────────────────────────────────
-    ("stripe", None),              # Stripe, NYC office
-    ("plaid", None),               # Plaid, NYC
-    ("brex", None),                # Brex, NYC
-    ("ramp", None),                # Ramp, NYC HQ
-    ("navan", None),               # Navan (TripActions), NYC
-    ("rippling", None),            # Rippling, NYC office
-    ("bettercom", None),           # Better.com, NYC
-    ("lemonade", None),            # Lemonade, NYC HQ
-    ("oscar", None),               # Oscar Health, NYC HQ
-    ("etsy", None),                # Etsy, NYC HQ
-    ("squarespace", None),         # Squarespace, NYC HQ
-    ("shutterstock", None),        # Shutterstock, NYC HQ
-    # ── Big Tech NYC offices ──────────────────────────────────────────────────
-    ("google", None),              # Google, NYC large office
-    ("meta", None),                # Meta, NYC office
-    ("amazon", None),              # Amazon, NYC large office
-    ("apple", None),               # Apple, NYC
-    ("microsoft", None),           # Microsoft, NYC
-    ("salesforce", None),          # Salesforce, NYC
-    ("databricks", None),          # Databricks, NYC
-    ("datadog", None),             # Datadog, NYC HQ
-    ("mongodb", None),             # MongoDB, NYC HQ
-    ("cloudflare", None),          # Cloudflare, NYC
-    ("twilio", None),              # Twilio, NYC office
-    ("hashicorp", None),           # HashiCorp, NYC
-    ("confluent", None),           # Confluent, NYC office
-    ("snowflake", None),           # Snowflake, NYC office
-    # ── Media / AdTech ───────────────────────────────────────────────────────
-    ("nytimes", None),             # NY Times, NYC HQ
-    ("buzzfeed", None),            # BuzzFeed, NYC
-    ("voxmedia", None),            # Vox Media, NYC
-    ("nbcuniversal", None),        # NBCUniversal, NYC HQ
-    ("condenastvacancies", None),  # Condé Nast, NYC
-    ("warnermedia", None),         # Warner Bros Discovery
-    ("iheartmedia", None),         # iHeartMedia, NYC
-    ("spotifyjobs", None),         # Spotify, NYC
-    ("pandora", None),             # Pandora, NYC
-    # ── Healthcare / Pharma ───────────────────────────────────────────────────
-    ("pfizer", None),              # Pfizer, NYC HQ
-    ("merck", None),               # Merck, Rahway NJ/NYC
-    ("moodys", None),              # Moody's, NYC
-    ("cvs", None),                 # CVS Health (NYC operations)
-    # ── E-commerce / Retail ───────────────────────────────────────────────────
-    ("warbyparker", None),         # Warby Parker, NYC HQ
-    ("glossier", None),            # Glossier, NYC HQ
-    ("rent-the-runway", None),     # Rent the Runway, NYC
-    ("theredefinedgroup", None),   # NYC retail/fashion
-    # ── Real Estate / PropTech ────────────────────────────────────────────────
-    ("compass", None),             # Compass, NYC HQ
-    ("streeteasy", None),          # StreetEasy/Zillow, NYC
-    ("commonliving", None),        # Common Living, NYC
-    # ── B2B / Enterprise SaaS ─────────────────────────────────────────────────
-    ("pagerduty", None),           # PagerDuty, NYC
-    ("gitlab", None),              # GitLab, remote/NYC
-    ("atlassian", None),           # Atlassian, NYC
-    ("zendesk", None),             # Zendesk, NYC
-    ("brainware", None),
-    ("hubspot", None),             # HubSpot, NYC
-    ("intercom", None),            # Intercom, NYC
-    ("amplitude", None),           # Amplitude, NYC
-    ("mixpanel", None),            # Mixpanel, NYC
-    # ── Travel / Hospitality ─────────────────────────────────────────────────
-    ("airbnb", None),              # Airbnb, NYC office
-    ("tripadvisor", None),         # TripAdvisor, NYC
-    ("marriott", None),            # Marriott, NYC
-    ("hilton", None),              # Hilton, NYC
-]
+# === Phase 4 seed loader (added 2026-05-27) ===
+sys.path.insert(0, os.path.expanduser('~/shared-scripts'))
+from hub_employer_seeds import load_greenhouse_seeds
+SEED_SLUGS = load_greenhouse_seeds('ny')
 
 
 SALARY_PATTERNS = [
@@ -244,6 +164,7 @@ def main():
 
     log("=== NY Greenhouse scraper started ===")
     existing = load_existing_keys()
+    existing_urls = load_existing_urls()
     log(f"Existing dedup keys: {len(existing)}")
 
     new_count = 0
@@ -251,11 +172,14 @@ def main():
         log(f"[{slug}] fetching...")
         jobs = fetch_company_jobs(slug, name_override)
         for job in jobs:
+            if job.get("source_url") in existing_urls:
+                continue
             key = f"{job['role'].lower().strip()}|{job['company'].lower().strip()}"
             if key in existing:
                 continue
             write_job(OUTPUT_FILE, job)
             existing.add(key)
+            existing_urls.add(job.get("source_url", ""))
             new_count += 1
             log(f"  + {job['role']} @ {job['company']} | ${job['min']:,}–${job['max']:,} | {job['location']}")
         time.sleep(0.5)

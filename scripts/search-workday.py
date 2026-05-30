@@ -27,7 +27,7 @@ from datetime import date, timedelta
 
 sys.path.insert(0, os.path.dirname(__file__))
 from _common import (
-    make_logger, acquire_lock, exa_search, load_existing_keys, write_job,
+    make_logger, acquire_lock, exa_search, load_existing_keys, load_existing_urls, write_job,
     TODAY, OUTPUT_FILE,
 )
 
@@ -43,59 +43,10 @@ UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML,
 
 # ── Seed tenants — NY-present Workday employers ───────────────────────────────
 # (host, company_id, tenant, display_name)
-SEED_TENANTS = [
-    # Financial services (NY HQ / major NY presence)
-    ("jpmc.wd1.myworkdayjobs.com",          "jpmc",         "JPMcCommon",              "JPMorgan Chase"),
-    ("goldmansachs.wd1.myworkdayjobs.com",  "goldmansachs", "GlobalApps",              "Goldman Sachs"),
-    ("morganstanley.wd1.myworkdayjobs.com", "morganstanley","ExternalCareers",         "Morgan Stanley"),
-    ("aexp.wd5.myworkdayjobs.com",          "aexp",         "external_career_site",    "American Express"),
-    ("metlife.wd1.myworkdayjobs.com",       "metlife",      "Global",                  "MetLife"),
-    ("newyorklife.wd5.myworkdayjobs.com",   "newyorklife",  "NYLCareers",              "New York Life"),
-    ("bloomberg.wd1.myworkdayjobs.com",     "bloomberg",    "finance",                 "Bloomberg"),
-    ("blackrock.wd1.myworkdayjobs.com",     "blackrock",    "Careers",                 "BlackRock"),
-    ("pimco.wd1.myworkdayjobs.com",         "pimco",        "Careers",                 "PIMCO"),
-    ("icapital.wd1.myworkdayjobs.com",      "icapital",     "iCapitalNetwork",         "iCapital"),
-    # Insurance
-    ("travelers.wd5.myworkdayjobs.com",     "travelers",    "ext",                     "Travelers Insurance"),
-    ("cna.wd1.myworkdayjobs.com",           "cna",          "CNA_Jobs",                "CNA Financial"),
-    # Pharma / life sciences (NY presence)
-    ("pfizer.wd1.myworkdayjobs.com",        "pfizer",       "PfizerEarlyTalent",       "Pfizer"),
-    ("pfizer.wd1.myworkdayjobs.com",        "pfizer",       "PfizerCareers",           "Pfizer"),
-    ("bms.wd5.myworkdayjobs.com",           "bms",          "External",                "Bristol-Myers Squibb"),
-    ("lilly.wd5.myworkdayjobs.com",         "lilly",        "Lilly",                   "Eli Lilly"),
-    # Media / entertainment
-    ("nbcuni.wd1.myworkdayjobs.com",        "nbcuni",       "Careers",                 "NBCUniversal"),
-    ("viacomcbs.wd1.myworkdayjobs.com",     "viacomcbs",    "External",                "Paramount"),
-    ("nytimes.wd1.myworkdayjobs.com",       "nytimes",      "Careers",                 "The New York Times"),
-    ("hearst.wd5.myworkdayjobs.com",        "hearst",       "Hearst_External_Career_Site", "Hearst"),
-    # Tech (NY offices)
-    ("verizon.wd5.myworkdayjobs.com",       "verizon",      "External",                "Verizon"),
-    ("ibm.wd12.myworkdayjobs.com",          "ibm",          "ExternalSite",            "IBM"),
-    ("salesforce.wd12.myworkdayjobs.com",   "salesforce",   "External_Career_Site",    "Salesforce"),
-    ("spotify.wd1.myworkdayjobs.com",       "spotify",      "External",                "Spotify"),
-    ("datadog.wd1.myworkdayjobs.com",       "datadog",      "Careers",                 "Datadog"),
-    # Healthcare
-    ("northwellhealth.wd5.myworkdayjobs.com","northwellhealth","External",             "Northwell Health"),
-    ("mountsinai.wd5.myworkdayjobs.com",    "mountsinai",   "CareersAtMountSinai",     "Mount Sinai Health System"),
-    # Retail / consumer (NY HQ)
-    ("macys.wd5.myworkdayjobs.com",         "macys",        "macys",                   "Macy's"),
-    ("estee-lauder.wd5.myworkdayjobs.com",  "estee-lauder", "EsteeLauder",             "Estée Lauder"),
-    ("tapestry.wd5.myworkdayjobs.com",      "tapestry",     "tapestrycareers",         "Tapestry (Coach)"),
-    ("pvh.wd5.myworkdayjobs.com",           "pvh",          "PVHCorp",                 "PVH (Calvin Klein/Tommy Hilfiger)"),
-    ("tiffany.wd5.myworkdayjobs.com",       "tiffany",      "TiffanyGlobal",           "Tiffany & Co."),
-    # Financial services (cross-hub additions)
-    ("statestreet.wd1.myworkdayjobs.com",   "statestreet",  "Global",                  "State Street"),
-    # Professional services
-    ("deloitte.wd1.myworkdayjobs.com",      "deloitte",     "ExternalCareers",         "Deloitte"),
-    ("accenture.wd3.myworkdayjobs.com",     "accenture",    "AccentureCareers",        "Accenture"),
-    ("pwc.wd3.myworkdayjobs.com",           "pwc",          "Global_Experienced_Careers", "PwC"),
-    ("kpmg.wd5.myworkdayjobs.com",          "kpmg",         "KPMG_Careers",            "KPMG"),
-    # Real estate
-    ("jll.wd5.myworkdayjobs.com",           "jll",          "JLL_Global_Careers",      "JLL"),
-    ("cushmanwakefield.wd1.myworkdayjobs.com","cushmanwakefield","CushmanWakefield",    "Cushman & Wakefield"),
-    # Transportation / logistics
-    ("jetblue.wd5.myworkdayjobs.com",       "jetblue",      "JetBlueCareers",          "JetBlue"),
-]
+# === Phase 4 seed loader (added 2026-05-27) ===
+sys.path.insert(0, os.path.expanduser('~/shared-scripts'))
+from hub_employer_seeds import load_workday_seeds
+SEED_TENANTS = load_workday_seeds('ny')
 
 KNOWN_COMPANY_OVERRIDES = {
     "jpmc":            "JPMorgan Chase",
@@ -116,8 +67,6 @@ KNOWN_COMPANY_OVERRIDES = {
     "icapital":        "iCapital",
     "salesforce":      "Salesforce",
     "statestreet":     "State Street",
-    "accenture":       "Accenture",
-    "deloitte":        "Deloitte",
     "pwc":             "PwC",
     "jll":             "JLL",
     "cushmanwakefield":"Cushman & Wakefield",
@@ -177,7 +126,6 @@ _WD_SITE_URL_RE = re.compile(
 _SKIP_TENANTS = {'job', 'jobs', 'search', 'en', 'en-us', 'en-gb', 'fr', 'details', 'recruiting'}
 _NUMERIC_PREFIX_RE = re.compile(r'^\d{3,5}\s+')
 
-
 def format_tenant_name(company_id, tenant):
     override = KNOWN_COMPANY_OVERRIDES.get(company_id.lower())
     if override:
@@ -188,7 +136,6 @@ def format_tenant_name(company_id, tenant):
     if len(words) >= 2:
         return ' '.join(words)
     return company_id.replace('-', ' ').title()
-
 
 def parse_workday_tenant(url):
     m = _WD_URL_RE.match(url)
@@ -203,7 +150,6 @@ def parse_workday_tenant(url):
     if tenant.lower() in _SKIP_TENANTS or len(tenant) < 3:
         return None
     return host, company_id, tenant
-
 
 def discover_tenants():
     discovered = {}
@@ -234,7 +180,6 @@ def discover_tenants():
         time.sleep(1.5)
     return list(discovered.values()), candidate_urls
 
-
 def wd_list_jobs(host, company_id, tenant, offset=0, limit=10, search_text=""):
     url = f"https://{host}/wday/cxs/{company_id}/{tenant}/jobs"
     body = json.dumps({"appliedFacets": {}, "limit": limit, "offset": offset, "searchText": search_text})
@@ -258,14 +203,12 @@ def wd_list_jobs(host, company_id, tenant, offset=0, limit=10, search_text=""):
         log(f"  API error ({host}): {e}")
         return [], 0
 
-
 def is_new_york(locations_text, external_path=""):
     ep = (external_path or "").lower()
     lt = (locations_text or "").lower()
     if any(t in ep for t in _NON_NY_PATH_TERMS):
         return False
     return any(t in lt for t in NY_TERMS) or any(t in ep for t in _NY_PATH_TERMS)
-
 
 def parse_location(locations_text, external_path=""):
     lt = (locations_text or "").lower()
@@ -283,7 +226,6 @@ def parse_location(locations_text, external_path=""):
         return "New York, NY"
     return "New York, NY"
 
-
 def fetch_job_html(host, tenant, external_path, company_id=""):
     if "myworkdaysite.com" in host:
         url = f"https://{host}/en-US/recruiting/{company_id}/{tenant}{external_path}"
@@ -299,7 +241,6 @@ def fetch_job_html(host, tenant, external_path, company_id=""):
     except Exception:
         return None
 
-
 def fetch_job_html_from_url(url):
     req = urllib.request.Request(url)
     req.add_header("User-Agent", UA)
@@ -309,7 +250,6 @@ def fetch_job_html_from_url(url):
             return r.read().decode("utf-8", errors="ignore")
     except Exception:
         return None
-
 
 def parse_workday_job_url(url):
     try:
@@ -333,14 +273,12 @@ def parse_workday_job_url(url):
     external_path = "/" + "/".join(parts[tenant_idx + 1:])
     return host, company_id, tenant, external_path
 
-
 def normalize_company_name(name):
     if not name:
         return name
     name = _NUMERIC_PREFIX_RE.sub('', name).strip()
     import html as _html
     return _html.unescape(name)
-
 
 def extract_company_from_html(text):
     if not text:
@@ -371,7 +309,6 @@ def extract_company_from_html(text):
             return normalize_company_name(name)
     return None
 
-
 def extract_title_from_html(text):
     if not text:
         return None
@@ -401,7 +338,6 @@ def extract_title_from_html(text):
                 return title
     return None
 
-
 def extract_posted_from_html(text):
     if not text:
         return TODAY
@@ -421,7 +357,6 @@ def extract_posted_from_html(text):
         except Exception:
             continue
     return TODAY
-
 
 def extract_salary(text):
     if not text:
@@ -444,7 +379,6 @@ def extract_salary(text):
                 continue
     return None
 
-
 def fetch_sitemap_jobs(sitemap_url):
     """Fetch job URLs from a Workday siteMap.xml (no auth required)."""
     import xml.etree.ElementTree as ET
@@ -459,7 +393,6 @@ def fetch_sitemap_jobs(sitemap_url):
         return []
     ns = {"ns": "http://www.sitemaps.org/schemas/sitemap/0.9"}
     return [loc.text for loc in root.findall(".//ns:loc", ns) if loc.text]
-
 
 def extract_location_from_html(text, external_path=""):
     if not text:
@@ -484,7 +417,6 @@ def extract_location_from_html(text, external_path=""):
             continue
     return parse_location("", external_path)
 
-
 def main():
     if not acquire_lock(LOCK_FILE, log):
         return 1
@@ -502,6 +434,7 @@ def main():
 
     existing_keys = load_existing_keys()
     seen_keys = set(existing_keys)
+    seen_urls = load_existing_urls()
     os.makedirs(os.path.dirname(OUTPUT_FILE), exist_ok=True)
 
     total_found = 0
@@ -571,6 +504,9 @@ def main():
             val_min, val_max = salary
             location = parse_location(locations, ext_path)
             source_url = f"https://{host}/en-US/{tenant}{ext_path}"
+
+            if source_url in seen_urls:
+                continue
             resolved_company = extract_company_from_html(text) or company_name
 
             posted = TODAY
@@ -590,6 +526,7 @@ def main():
             }
 
             seen_keys.add(key)
+            seen_urls.add(source_url)
             write_job(OUTPUT_FILE, job)
             total_found += 1
             log(f"    → FOUND: ${val_min:,}–${val_max:,} [{location}]")
@@ -706,7 +643,6 @@ def main():
         f"(api_failures={api_failures}, direct_fallback={direct_fallback_found}, sitemap={sitemap_found}) ==="
     )
     return 0
-
 
 if __name__ == "__main__":
     sys.exit(main())

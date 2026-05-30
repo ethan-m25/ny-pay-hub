@@ -26,6 +26,7 @@ from datetime import date, datetime, timedelta, timezone
 sys.path.insert(0, os.path.dirname(__file__))
 from _common import (
     make_logger, acquire_lock, exa_search, load_existing_keys,
+    load_existing_urls,
     write_job, TODAY, OUTPUT_FILE,
 )
 
@@ -39,118 +40,10 @@ log = make_logger(LOG_FILE)
 fetcher = Fetcher()
 
 # ── Seed slugs — NY-present Lever companies ───────────────────────────────────
-SEED_SLUGS = [
-    # Fintech / finance
-    "betterment",
-    "brex",
-    "carta",
-    "chime",
-    "clearco",
-    "commonbond",
-    "ellevest",
-    "fundbox",
-    "lemonade",
-    "moderntreasury",
-    "nerdwallet",
-    "oscar",          # Oscar Health
-    "pave",
-    "ramp",
-    "stash",
-    "yieldstreet",
-    # Tech / SaaS
-    "cockroachlabs",
-    "collibra",
-    "contentful",
-    "datadog",        # Datadog NY HQ
-    "dialpad",
-    "etsy",           # Brooklyn HQ
-    "figma",
-    "futureworks",
-    "greenhouse",     # Greenhouse.io NY HQ
-    "grubhub",
-    "hashicorp",
-    "highspot",
-    "kaltura",
-    "knewton",
-    "lob",
-    "mongodb",        # MongoDB NY HQ
-    "movable-ink",
-    "namely",
-    "netsol",
-    "newrelic",
-    "opentable",
-    "peloton",        # Peloton NY HQ
-    "percolate",
-    "persistent",
-    "policygenius",
-    "poppin",
-    "quartet",
-    "recurly",
-    "sailpoint",
-    "sendgrid",
-    "sentry",
-    "shapeways",
-    "shutterstock",   # Shutterstock NY HQ
-    "sifted",
-    "society6",
-    "squarespace",    # Squarespace NY HQ
-    "swiftly",
-    "toast",
-    "transunion",
-    "trustpilot",
-    "tumblr",
-    "vimeo",          # Vimeo NY HQ
-    "wirecutter",
-    "workato",
-    "yext",           # Yext NY HQ
-    "zocdoc",         # Zocdoc NY HQ
-    # Media / content
-    "buzzfeed",
-    "conde-nast",
-    "dotdash",
-    "hearst",
-    "nbcuniversal",
-    "newsela",
-    "spotify",
-    "theknot",
-    "vox",
-    # Healthcare
-    "cityblock",
-    "flatiron",       # Flatiron Health NY
-    "galileo",
-    "ro",             # Ro Health NY
-    "spring-health",
-    "turquoise-health",
-    "wellth",
-    # Real estate / proptech
-    "compass",
-    "opendoor",
-    "orchard",
-    "streeteasy",
-    # E-commerce / retail
-    "rent-the-runway",
-    "revolve",
-    "shopbop",
-    "warby-parker",   # Warby Parker NY HQ
-    # Advertising / marketing
-    "appnexus",
-    "digilant",
-    "foursquare",
-    "meredith",
-    "sharethrough",
-    # Legal / professional services
-    "axiom",
-    "ontra",
-    # Logistics / transportation
-    "flexport",
-    "transfix",
-    "veho",
-    # Education
-    "duolingo",
-    "genius",
-    "knewton",
-    "newsela",
-]
+# === Phase 4 seed loader (added 2026-05-27) ===
+sys.path.insert(0, os.path.expanduser('~/shared-scripts'))
+from hub_employer_seeds import load_lever_seeds
+SEED_SLUGS = load_lever_seeds('ny')
 
 DISCOVERY_QUERIES = [
     'site:jobs.lever.co "New York" salary 2026',
@@ -309,6 +202,7 @@ def main():
 
     existing_keys = load_existing_keys()
     seen_keys = set(existing_keys)
+    seen_urls = load_existing_urls()
     os.makedirs(os.path.dirname(OUTPUT_FILE), exist_ok=True)
 
     total_found = 0
@@ -359,6 +253,8 @@ def main():
             vmin, vmax = salary
             job_id = job.get("id", "")
             abs_url = f"https://jobs.lever.co/{slug}/{job_id}" if job_id else ""
+            if abs_url and abs_url in seen_urls:
+                continue
 
             posted = TODAY
             created_ms = job.get("createdAt")
@@ -383,6 +279,7 @@ def main():
 
             write_job(OUTPUT_FILE, job_out)
             seen_keys.add(key)
+            seen_urls.add(abs_url)
             total_found += 1
             found_this += 1
             log(f"  FOUND: {title[:50]} | ${vmin:,}–${vmax:,} [{loc_name}]")
