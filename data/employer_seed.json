@@ -521,478 +521,9 @@
       "meta": {}
     },
     {
-      "name": "Betterment",
-      "ats": "lever",
-      "slug_or_url": "betterment",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Brex",
-      "ats": "lever",
-      "slug_or_url": "brex",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Carta",
-      "ats": "lever",
-      "slug_or_url": "carta",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Chime",
-      "ats": "lever",
-      "slug_or_url": "chime",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Clearco",
-      "ats": "lever",
-      "slug_or_url": "clearco",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Commonbond",
-      "ats": "lever",
-      "slug_or_url": "commonbond",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Ellevest",
-      "ats": "lever",
-      "slug_or_url": "ellevest",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Fundbox",
-      "ats": "lever",
-      "slug_or_url": "fundbox",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Lemonade",
-      "ats": "lever",
-      "slug_or_url": "lemonade",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Moderntreasury",
-      "ats": "lever",
-      "slug_or_url": "moderntreasury",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Nerdwallet",
-      "ats": "lever",
-      "slug_or_url": "nerdwallet",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Oscar",
-      "ats": "lever",
-      "slug_or_url": "oscar",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Pave",
-      "ats": "lever",
-      "slug_or_url": "pave",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Ramp",
-      "ats": "lever",
-      "slug_or_url": "ramp",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Stash",
-      "ats": "lever",
-      "slug_or_url": "stash",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Yieldstreet",
-      "ats": "lever",
-      "slug_or_url": "yieldstreet",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Cockroachlabs",
-      "ats": "lever",
-      "slug_or_url": "cockroachlabs",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Collibra",
-      "ats": "lever",
-      "slug_or_url": "collibra",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Contentful",
-      "ats": "lever",
-      "slug_or_url": "contentful",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Datadog",
-      "ats": "lever",
-      "slug_or_url": "datadog",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Dialpad",
-      "ats": "lever",
-      "slug_or_url": "dialpad",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Etsy",
-      "ats": "lever",
-      "slug_or_url": "etsy",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Figma",
-      "ats": "lever",
-      "slug_or_url": "figma",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Futureworks",
-      "ats": "lever",
-      "slug_or_url": "futureworks",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Greenhouse",
-      "ats": "lever",
-      "slug_or_url": "greenhouse",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Grubhub",
-      "ats": "lever",
-      "slug_or_url": "grubhub",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Hashicorp",
-      "ats": "lever",
-      "slug_or_url": "hashicorp",
-      "monitored": true,
-      "meta": {}
-    },
-    {
       "name": "Highspot",
       "ats": "lever",
       "slug_or_url": "highspot",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Kaltura",
-      "ats": "lever",
-      "slug_or_url": "kaltura",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Knewton",
-      "ats": "lever",
-      "slug_or_url": "knewton",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Lob",
-      "ats": "lever",
-      "slug_or_url": "lob",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Mongodb",
-      "ats": "lever",
-      "slug_or_url": "mongodb",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Movable Ink",
-      "ats": "lever",
-      "slug_or_url": "movable-ink",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Namely",
-      "ats": "lever",
-      "slug_or_url": "namely",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Netsol",
-      "ats": "lever",
-      "slug_or_url": "netsol",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Newrelic",
-      "ats": "lever",
-      "slug_or_url": "newrelic",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Opentable",
-      "ats": "lever",
-      "slug_or_url": "opentable",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Peloton",
-      "ats": "lever",
-      "slug_or_url": "peloton",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Percolate",
-      "ats": "lever",
-      "slug_or_url": "percolate",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Persistent",
-      "ats": "lever",
-      "slug_or_url": "persistent",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Policygenius",
-      "ats": "lever",
-      "slug_or_url": "policygenius",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Poppin",
-      "ats": "lever",
-      "slug_or_url": "poppin",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Quartet",
-      "ats": "lever",
-      "slug_or_url": "quartet",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Recurly",
-      "ats": "lever",
-      "slug_or_url": "recurly",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Sailpoint",
-      "ats": "lever",
-      "slug_or_url": "sailpoint",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Sendgrid",
-      "ats": "lever",
-      "slug_or_url": "sendgrid",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Sentry",
-      "ats": "lever",
-      "slug_or_url": "sentry",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Shapeways",
-      "ats": "lever",
-      "slug_or_url": "shapeways",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Shutterstock",
-      "ats": "lever",
-      "slug_or_url": "shutterstock",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Sifted",
-      "ats": "lever",
-      "slug_or_url": "sifted",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Society6",
-      "ats": "lever",
-      "slug_or_url": "society6",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Squarespace",
-      "ats": "lever",
-      "slug_or_url": "squarespace",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Swiftly",
-      "ats": "lever",
-      "slug_or_url": "swiftly",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Toast",
-      "ats": "lever",
-      "slug_or_url": "toast",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Transunion",
-      "ats": "lever",
-      "slug_or_url": "transunion",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Trustpilot",
-      "ats": "lever",
-      "slug_or_url": "trustpilot",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Tumblr",
-      "ats": "lever",
-      "slug_or_url": "tumblr",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Vimeo",
-      "ats": "lever",
-      "slug_or_url": "vimeo",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Wirecutter",
-      "ats": "lever",
-      "slug_or_url": "wirecutter",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Workato",
-      "ats": "lever",
-      "slug_or_url": "workato",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Yext",
-      "ats": "lever",
-      "slug_or_url": "yext",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Zocdoc",
-      "ats": "lever",
-      "slug_or_url": "zocdoc",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Buzzfeed",
-      "ats": "lever",
-      "slug_or_url": "buzzfeed",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Conde Nast",
-      "ats": "lever",
-      "slug_or_url": "conde-nast",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Dotdash",
-      "ats": "lever",
-      "slug_or_url": "dotdash",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Hearst",
-      "ats": "lever",
-      "slug_or_url": "hearst",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Nbcuniversal",
-      "ats": "lever",
-      "slug_or_url": "nbcuniversal",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Newsela",
-      "ats": "lever",
-      "slug_or_url": "newsela",
       "monitored": true,
       "meta": {}
     },
@@ -1004,219 +535,9 @@
       "meta": {}
     },
     {
-      "name": "Theknot",
-      "ats": "lever",
-      "slug_or_url": "theknot",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Vox",
-      "ats": "lever",
-      "slug_or_url": "vox",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Cityblock",
-      "ats": "lever",
-      "slug_or_url": "cityblock",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Flatiron",
-      "ats": "lever",
-      "slug_or_url": "flatiron",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Galileo",
-      "ats": "lever",
-      "slug_or_url": "galileo",
-      "monitored": true,
-      "meta": {}
-    },
-    {
       "name": "Ro",
       "ats": "lever",
       "slug_or_url": "ro",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Spring Health",
-      "ats": "lever",
-      "slug_or_url": "spring-health",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Turquoise Health",
-      "ats": "lever",
-      "slug_or_url": "turquoise-health",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Wellth",
-      "ats": "lever",
-      "slug_or_url": "wellth",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Compass",
-      "ats": "lever",
-      "slug_or_url": "compass",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Opendoor",
-      "ats": "lever",
-      "slug_or_url": "opendoor",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Orchard",
-      "ats": "lever",
-      "slug_or_url": "orchard",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Streeteasy",
-      "ats": "lever",
-      "slug_or_url": "streeteasy",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Rent The Runway",
-      "ats": "lever",
-      "slug_or_url": "rent-the-runway",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Revolve",
-      "ats": "lever",
-      "slug_or_url": "revolve",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Shopbop",
-      "ats": "lever",
-      "slug_or_url": "shopbop",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Warby Parker",
-      "ats": "lever",
-      "slug_or_url": "warby-parker",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Appnexus",
-      "ats": "lever",
-      "slug_or_url": "appnexus",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Digilant",
-      "ats": "lever",
-      "slug_or_url": "digilant",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Foursquare",
-      "ats": "lever",
-      "slug_or_url": "foursquare",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Meredith",
-      "ats": "lever",
-      "slug_or_url": "meredith",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Sharethrough",
-      "ats": "lever",
-      "slug_or_url": "sharethrough",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Axiom",
-      "ats": "lever",
-      "slug_or_url": "axiom",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Ontra",
-      "ats": "lever",
-      "slug_or_url": "ontra",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Flexport",
-      "ats": "lever",
-      "slug_or_url": "flexport",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Transfix",
-      "ats": "lever",
-      "slug_or_url": "transfix",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Veho",
-      "ats": "lever",
-      "slug_or_url": "veho",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Duolingo",
-      "ats": "lever",
-      "slug_or_url": "duolingo",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Genius",
-      "ats": "lever",
-      "slug_or_url": "genius",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Knewton",
-      "ats": "lever",
-      "slug_or_url": "knewton",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Newsela",
-      "ats": "lever",
-      "slug_or_url": "newsela",
       "monitored": true,
       "meta": {}
     },
@@ -1561,7 +882,7 @@
       }
     },
     {
-      "name": "Estée Lauder",
+      "name": "Est\u00e9e Lauder",
       "ats": "workday",
       "slug_or_url": "estee-lauder.wd5.myworkdayjobs.com",
       "monitored": true,
@@ -1990,139 +1311,6 @@
       "meta": {}
     },
     {
-      "name": "Hubspot",
-      "ats": "lever",
-      "slug_or_url": "hubspot",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Zendesk",
-      "ats": "lever",
-      "slug_or_url": "zendesk",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Cloudflare",
-      "ats": "lever",
-      "slug_or_url": "cloudflare",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Coursera",
-      "ats": "lever",
-      "slug_or_url": "coursera",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Pagerduty",
-      "ats": "lever",
-      "slug_or_url": "pagerduty",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Loom",
-      "ats": "lever",
-      "slug_or_url": "loom",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Calendly",
-      "ats": "lever",
-      "slug_or_url": "calendly",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Miro",
-      "ats": "lever",
-      "slug_or_url": "miro",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Thoughtspot",
-      "ats": "lever",
-      "slug_or_url": "thoughtspot",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Sumo Logic",
-      "ats": "lever",
-      "slug_or_url": "sumo-logic",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Fivetran",
-      "ats": "lever",
-      "slug_or_url": "fivetran",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Productboard",
-      "ats": "lever",
-      "slug_or_url": "productboard",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Launchdarkly",
-      "ats": "lever",
-      "slug_or_url": "launchdarkly",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Segment",
-      "ats": "lever",
-      "slug_or_url": "segment",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Twilio",
-      "ats": "lever",
-      "slug_or_url": "twilio",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Elastic",
-      "ats": "lever",
-      "slug_or_url": "elastic",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Terraform",
-      "ats": "lever",
-      "slug_or_url": "terraform",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "High Radius",
-      "ats": "lever",
-      "slug_or_url": "high-radius",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Sprinklr",
-      "ats": "lever",
-      "slug_or_url": "sprinklr",
-      "monitored": true,
-      "meta": {}
-    },
-    {
       "name": "Bazaarvoice",
       "ats": "lever",
       "slug_or_url": "bazaarvoice",
@@ -2137,27 +1325,6 @@
       "meta": {}
     },
     {
-      "name": "Harness",
-      "ats": "lever",
-      "slug_or_url": "harness",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Chronosphere",
-      "ats": "lever",
-      "slug_or_url": "chronosphere",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Starburst",
-      "ats": "lever",
-      "slug_or_url": "starburst",
-      "monitored": true,
-      "meta": {}
-    },
-    {
       "name": "Immuta",
       "ats": "lever",
       "slug_or_url": "immuta",
@@ -2165,44 +1332,9 @@
       "meta": {}
     },
     {
-      "name": "Alation",
-      "ats": "lever",
-      "slug_or_url": "alation",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Atlan",
-      "ats": "lever",
-      "slug_or_url": "atlan",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Montecarlo Data",
-      "ats": "lever",
-      "slug_or_url": "montecarlo-data",
-      "monitored": true,
-      "meta": {}
-    },
-    {
       "name": "Acceldata",
       "ats": "lever",
       "slug_or_url": "acceldata",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Fiddler Ai",
-      "ats": "lever",
-      "slug_or_url": "fiddler-ai",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Arize Ai",
-      "ats": "lever",
-      "slug_or_url": "arize-ai",
       "monitored": true,
       "meta": {}
     },
@@ -2464,7 +1596,7 @@
       "meta": {}
     },
     {
-      "name": "Condé Nast",
+      "name": "Cond\u00e9 Nast",
       "ats": "greenhouse",
       "slug_or_url": "condenet",
       "monitored": true,
@@ -2746,34 +1878,6 @@
       "meta": {}
     },
     {
-      "name": "1Password",
-      "ats": "lever",
-      "slug_or_url": "1password",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Remote",
-      "ats": "lever",
-      "slug_or_url": "remote",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Mercury",
-      "ats": "lever",
-      "slug_or_url": "mercury",
-      "monitored": true,
-      "meta": {}
-    },
-    {
-      "name": "Glean",
-      "ats": "lever",
-      "slug_or_url": "glean",
-      "monitored": true,
-      "meta": {}
-    },
-    {
       "name": "Point72",
       "ats": "greenhouse",
       "slug_or_url": "point72",
@@ -2982,20 +2086,6 @@
         "discovery_hub": "ny",
         "ats_local_jobs": 12,
         "ats_local_salary": 10
-      }
-    },
-    {
-      "name": "Regalvoice",
-      "ats": "lever",
-      "slug_or_url": "regalvoice",
-      "monitored": true,
-      "meta": {
-        "promoted_at": "2026-05-28",
-        "promotion_tier": "strong",
-        "discovery_source": "phase7_ats_sweep",
-        "discovery_hub": "ny",
-        "ats_local_jobs": 15,
-        "ats_local_salary": 14
       }
     },
     {
@@ -3657,6 +2747,76 @@
         "ats_local_jobs": 7,
         "ats_local_salary": 7
       }
+    },
+    {
+      "name": "Elastic",
+      "ats": "greenhouse",
+      "slug_or_url": "elastic",
+      "tier": 2,
+      "note": "migrated from lever"
+    },
+    {
+      "name": "Fivetran",
+      "ats": "greenhouse",
+      "slug_or_url": "fivetran",
+      "tier": 2,
+      "note": "migrated from lever"
+    },
+    {
+      "name": "Contentful",
+      "ats": "greenhouse",
+      "slug_or_url": "contentful",
+      "tier": 2,
+      "note": "migrated from lever"
+    },
+    {
+      "name": "Mercury",
+      "ats": "greenhouse",
+      "slug_or_url": "mercury",
+      "tier": 2,
+      "note": "migrated from lever"
+    },
+    {
+      "name": "Launchdarkly",
+      "ats": "greenhouse",
+      "slug_or_url": "launchdarkly",
+      "tier": 2,
+      "note": "migrated from lever"
+    },
+    {
+      "name": "Cockroachlabs",
+      "ats": "greenhouse",
+      "slug_or_url": "cockroachlabs",
+      "tier": 2,
+      "note": "migrated from lever"
+    },
+    {
+      "name": "Starburst",
+      "ats": "greenhouse",
+      "slug_or_url": "starburst",
+      "tier": 2,
+      "note": "migrated from lever"
+    },
+    {
+      "name": "Calendly",
+      "ats": "greenhouse",
+      "slug_or_url": "calendly",
+      "tier": 2,
+      "note": "migrated from lever"
+    },
+    {
+      "name": "Coursera",
+      "ats": "greenhouse",
+      "slug_or_url": "coursera",
+      "tier": 2,
+      "note": "migrated from lever"
+    },
+    {
+      "name": "Remote",
+      "ats": "greenhouse",
+      "slug_or_url": "remote",
+      "tier": 2,
+      "note": "migrated from lever"
     }
   ],
   "expanded_at": "2026-05-27"
