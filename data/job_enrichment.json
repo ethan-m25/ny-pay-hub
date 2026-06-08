@@ -1,8 +1,8 @@
 {
   "meta": {
-    "built_at": "2026-06-07T10:06:02.055625+00:00",
-    "total_jobs": 2581,
-    "enriched": 2082
+    "built_at": "2026-06-08T11:38:13.392374+00:00",
+    "total_jobs": 2611,
+    "enriched": 2080
   },
   "jobs": {
     "compliance-officer-virtu-39717152": {
@@ -28563,29 +28563,6 @@
       "red_flags": [],
       "work_mode_derived": "onsite"
     },
-    "brand-designer-peec-57829525": {
-      "summary": "Owns and elevates Peec AI's visual identity across marketing channels, designs high-impact assets, and collaborates with cross-functional teams to drive engagement and brand trust.",
-      "key_skills": [
-        "brand design",
-        "visual identity",
-        "marketing assets",
-        "design system",
-        "conversion design",
-        "growth marketing",
-        "typography",
-        "visual storytelling"
-      ],
-      "core_skills": [
-        "brand design",
-        "visual identity",
-        "marketing assets",
-        "design system"
-      ],
-      "seniority_signal": "mid",
-      "role_type": "ic",
-      "red_flags": [],
-      "work_mode_derived": "onsite"
-    },
     "founding-product-mar-peec-57829525": {
       "summary": "Owns positioning, messaging, and narrative for Peec AI's product across all touchpoints, working with cross-functional teams to translate product value into customer-focused stories that drive action in the AI search space.",
       "key_skills": [
@@ -44369,29 +44346,6 @@
       "role_type": "ic",
       "red_flags": [],
       "work_mode_derived": "remote"
-    },
-    "marketing-operations-asana-37037450": {
-      "summary": "Partners with global marketing, sales, and technology teams to optimize the inbound lead funnel, ensuring seamless end-to-end infrastructure and operations while driving revenue growth through lead scoring, routing, and actionable insights.",
-      "key_skills": [
-        "marketing operations",
-        "lead funnel optimization",
-        "cross-functional process management",
-        "technical systems integration",
-        "revenue targeting",
-        "lead scoring",
-        "lead routing",
-        "reporting insights"
-      ],
-      "core_skills": [
-        "project management",
-        "technical infrastructure",
-        "cross-functional collaboration",
-        "revenue optimization"
-      ],
-      "seniority_signal": "mid",
-      "role_type": "manager",
-      "red_flags": [],
-      "work_mode_derived": "hybrid"
     },
     "senior-software-engi-asana-37037450": {
       "summary": "Builds AI-augmented workflows and systems to help engineers use AI for faster development tasks and reduce toil.",
